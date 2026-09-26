@@ -25,12 +25,13 @@ The main objective of this project is to analyze Netflix subscription activity a
 The project demonstrates how Microsoft Excel can be used as a business intelligence and data visualization tool.
 
 📊 Key Metrics
-<div align="center">
-👥	❌	💳	⚠️
-3,069	2,004	95.67%	4.33%
-Total Subscriptions	Total Cancellations	Paid Subscriptions	Unpaid Subscriptions
-</div>
+- Total Subscriptions: 3,069
+- Total Cancellations: 2,004
+- Paid Subscriptions: 95.67%
+- Unpaid Subscriptions: 4.33%
+
 📈 Dashboard Analysis
+
 📅 1. Subscriptions by Weekday
 
 Analyzes subscription activity across different days of the week.
@@ -75,22 +76,19 @@ This helps visualize cancellation activity and understand how it changes across 
 
 📆 6. Year-wise Analysis
 
-The dashboard contains subscription data for:
+📅 2022
 
-2022
- │
- ├── Subscription Analysis
- ├── Payment Analysis
- └── Cancellation Analysis
-     
-2023
- │
- ├── Subscription Analysis
- ├── Payment Analysis
- └── Cancellation Analysis
+- 📊 Subscription Analysis
+- 💳 Payment Analysis
+- ❌ Cancellation Analysis
 
+📅 2023
 
-An interactive Year Slicer allows users to filter the dashboard and analyze individual years.
+- 📊 Subscription Analysis
+- 💳 Payment Analysis
+- ❌ Cancellation Analysis
+
+> 🎛️ Use the interactive **Year Slicer** to switch between 2022 and 2023.
 
 ✨ Dashboard Features
 🎛️ Interactive Filtering
@@ -128,30 +126,41 @@ Cancellation trends
 Payment status
 
 🧩 Dashboard Components
-🎬 Netflix Subscription Dashboard
-│
-├── 📌 KPI Section
-│   ├── 👥 Total Subscriptions
-│   └── ❌ Total Cancellations
-│
-├── 💳 Payment Analysis
-│   ├── 💚 Paid Subscriptions
-│   └── ⚠️ Unpaid Subscriptions
-│
-├── 📅 Weekly Analysis
-│   ├── Subscriptions by Weekday
-│   └── Subscription Percentage by Day
-│
-├── 📈 Monthly Analysis
-│   └── New Subscriptions by Month
-│
-├── ❌ Cancellation Analysis
-│   └── Cancellation Trend Over Time
-│
-└── 🎛️ Interactive Filters
-    └── Year Slicer
-        ├── 2022
-        └── 2023
+
+📌 KPI Section
+> Provides a quick overview of the most important subscription metrics.
+
+- 👥 Total Subscriptions
+- ❌ Total Cancellations
+
+💳 Payment Analysis
+> Shows the distribution of paid and unpaid subscriptions.
+
+- 💚 Paid Subscriptions
+- ⚠️ Unpaid Subscriptions
+
+📅 Weekly Analysis
+> Analyzes subscription activity across different days of the week.
+
+- 📊 Subscriptions by Weekday
+- 📈 Subscription Percentage by Day
+
+📈 Monthly Analysis
+> Tracks new subscription activity over time.
+
+- 📊 New Subscriptions by Month
+
+❌ Cancellation Analysis
+> Visualizes cancellation activity over time.
+
+- 📉 Cancellation Trend Over Time
+
+🎛️ Interactive Filters
+> Allows users to dynamically filter the dashboard.
+
+- 📅 Year Slicer
+  - **2022**
+  - **2023**
 
 🛠️ Tools & Technologies
 📗 Microsoft Excel
@@ -196,56 +205,43 @@ Used to present complex subscription data in a simple and understandable format.
 
 🗓️ Data Period
 
-The dashboard covers subscription activity for:
+The dashboard covers subscription activity for the following years:
 
 📅 2022
-   │
-   └── Subscription & Cancellation Analysis
+
+- 📊 Subscription Analysis
+- ❌ Cancellation Analysis
 
 📅 2023
-   │
-   └── Subscription & Cancellation Analysis
 
-📂 Project Structure
-📁 Netflix-Subscription-Dashboard
-│
-├── 📊 Netflix Subscription Dashboard.xlsx
-│   │
-│   ├── 📄 Raw Data
-│   │
-│   ├── 📊 Pivot Tables
-│   │
-│   ├── 📈 Pivot Charts
-│   │
-│   └── 🎛️ Interactive Dashboard
-│
-├── 📁 images
-│   │
-│   └── 🖼️ netflix-subscription-dashboard.png
-│
-└── 📄 README.md
+- 📊 Subscription Analysis
+- ❌ Cancellation Analysis
 
-🔄 Dashboard Workflow
-            📄 Raw Subscription Data
-                     │
-                     ▼
-             🧹 Data Preparation
-                     │
-                     ▼
-              📊 Pivot Tables
-                     │
-                     ▼
-               📈 Pivot Charts
-                     │
-                     ▼
-              🎛️ Interactive
-                 Slicers
-                     │
-                     ▼
-          🎬 Excel Dashboard
-                     │
-                     ▼
-          📊 Business Insights
+## 📂 Project Structure
+
+```text
+Netflix-Subscription-Dashboard/
+│
+├── Netflix Subscription Dashboard.xlsx
+├── images/
+│   └── netflix-subscription-dashboard.png
+└── README.md
+```
+## 🔄 Dashboard Workflow
+
+**1. 📄 Raw Data**  
+↓  
+**2. 🧹 Data Preparation**  
+↓  
+**3. 📊 Pivot Tables**  
+↓  
+**4. 📈 Pivot Charts**  
+↓  
+**5. 🎛️ Interactive Slicers**  
+↓  
+**6. 🎬 Excel Dashboard**  
+↓  
+**7. 💡 Business Insights**
 
 💡 Business Use Case
 
@@ -292,6 +288,7 @@ Through this project, the following skills are demonstrated:
 📋 Business Reporting
 
 🚀 Key Highlights
+```
 ┌─────────────────────────────────────────────┐
 │              PROJECT HIGHLIGHTS             │
 ├─────────────────────────────────────────────┤
@@ -304,7 +301,7 @@ Through this project, the following skills are demonstrated:
 │  📗 Platform                  Excel         │
 │                                             │
 └─────────────────────────────────────────────┘
-
+```
 🎓 What I Learned
 
 This project helped demonstrate how raw business data can be transformed into an interactive analytical dashboard using Microsoft Excel.
