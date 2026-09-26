@@ -61,6 +61,7 @@ Average Income
 </td> </tr> </table>
 📈 Dashboard Analysis
 
+
 👥 Customer Overview
 
 Provides an overall view of the customer base and key customer characteristics.
@@ -192,6 +193,7 @@ Provides additional customer segmentation based on:
 🌎 Region
 
 🛠️ Tools & Technologies
+
 📗 Microsoft Excel
 
 Used as the primary platform for data analysis, dashboard development, calculations, and visualization.
