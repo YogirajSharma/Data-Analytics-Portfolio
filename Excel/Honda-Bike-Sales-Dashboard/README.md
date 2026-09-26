@@ -431,6 +431,9 @@ Data visualization
 
 Business-oriented reporting
 
+📥 Download Dashboard
+<p align="center"> <a href="./Honda_Bike_Sales_Dashboard.xlsx"> <img src="https://img.shields.io/badge/📊%20Download%20Excel%20Dashboard-217346?style=for-the-badge&logo=microsoftexcel&logoColor=white" alt="Download Excel Dashboard"> </a> </p>
+
 📌 Conclusion
 
 The Honda Bike Sales Dashboard demonstrates how Microsoft Excel can be used to transform customer data into an interactive and visually engaging analytical solution.
