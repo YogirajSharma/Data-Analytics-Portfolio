@@ -40,7 +40,7 @@ The dashboard covers the following areas:
 
 ## Dashboard Preview
 
-![Honda Bike Sales Dashboard](images/honda-bike-sales-dashboard.png)
+![Honda Bike Sales Dashboard](Images/honda-bike-sales-dashboard.png)
 
 ## Objective
 
