@@ -24,30 +24,6 @@
 
 ---
 
-## 📌 Table of Contents
-
-- [📖 Project Overview](#-project-overview)
-- [🎯 Project Objective](#-project-objective)
-- [📊 Project Snapshot](#-project-snapshot)
-- [🗄️ Database Overview](#️-database-overview)
-- [🏗️ Database Architecture](#️-database-architecture)
-- [🗃️ Database Tables](#️-database-tables)
-- [🖼️ Database Schema](#️-database-schema)
-- [🔗 Table Relationships](#-table-relationships)
-- [📈 Business Questions & Analysis](#-business-questions--analysis)
-- [🧠 SQL Concepts Used](#-sql-concepts-used)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [🔄 Project Workflow](#-project-workflow)
-- [▶️ How to Run the Project](#️-how-to-run-the-project)
-- [📥 How to Download](#-how-to-download)
-- [🎓 Key Learning Areas](#-key-learning-areas)
-- [💼 Skills Demonstrated](#-skills-demonstrated)
-- [📂 Project Structure](#-project-structure)
-- [⚠️ Important Note](#️-important-note)
-- [🏁 Conclusion](#-conclusion)
-
----
-
 # 📖 Project Overview
 
 The **Zomato MySQL Data Analytics Project** is a relational database and SQL analysis project built to practice real-world data analysis using **MySQL**.
