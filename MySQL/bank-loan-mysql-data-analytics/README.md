@@ -25,37 +25,6 @@
 
 ---
 
-# 📌 Table of Contents
-
-- [📖 Project Overview](#-project-overview)
-- [🎯 Project Objective](#-project-objective)
-- [📊 Project Snapshot](#-project-snapshot)
-- [🗄️ Database Overview](#️-database-overview)
-- [🏗️ Database Architecture](#️-database-architecture)
-- [🗃️ Database Table](#️-database-table)
-- [📋 Data Fields](#-data-fields)
-- [📈 Analysis Areas](#-analysis-areas)
-- [🔍 KPI Analysis](#-kpi-analysis)
-- [🟢 Good Loan Analysis](#-good-loan-analysis)
-- [🔴 Bad Loan Analysis](#-bad-loan-analysis)
-- [📊 Loan Status Analysis](#-loan-status-analysis)
-- [📅 Loan Overview Analysis](#-loan-overview-analysis)
-- [📈 Month-over-Month Analysis](#-month-over-month-analysis)
-- [💰 Interest Rate Analysis](#-interest-rate-analysis)
-- [🧠 SQL Concepts Used](#-sql-concepts-used)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [🔄 Project Workflow](#-project-workflow)
-- [▶️ How to Run the Project](#️-how-to-run-the-project)
-- [📥 How to Download](#-how-to-download)
-- [🎓 Key Learning Areas](#-key-learning-areas)
-- [💼 Skills Demonstrated](#-skills-demonstrated)
-- [📂 Project Structure](#-project-structure)
-- [🔗 Quick Links](#-quick-links)
-- [⚠️ Important Note](#️-important-note)
-- [🏁 Conclusion](#-conclusion)
-
----
-
 # 📖 Project Overview
 
 The **Bank Loan MySQL Data Analytics Project** is a SQL-based data analytics project built using **MySQL**.
