@@ -1,86 +1,143 @@
-# 🎬 Netflix MySQL Data Analytics Project
+# 🎬 Netflix MySQL Data Analytics
 
 <p align="center">
-  <img src="schema/netflix_schema.png"
-       alt="Netflix MySQL Database Schema"
-       width="950">
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/SQL-Data%20Analytics-CC2927?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/Database%20Design-2E8B57?style=for-the-badge" alt="Database Design">
+  <img src="https://img.shields.io/badge/Data%20Analysis-6A5ACD?style=for-the-badge" alt="Data Analysis">
 </p>
 
 <p align="center">
-  <strong>A MySQL Database Design & SQL Data Analysis Project</strong>
+  <strong>Relational Database Design • SQL Analytics • Business Analysis</strong>
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/SQL-Analysis-CC2927?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/Database-Design-2E8B57?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Data-Analytics-6A5ACD?style=for-the-badge">
+  A practical MySQL project focused on customers, subscriptions,
+  content, viewing behavior, profiles, devices, payments, and revenue analysis.
+</p>
+
+<p align="center">
+  <a href="./netflix_database.sql">📄 View SQL Script</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="./schema/netflix_schema.png">🗺️ View Database Schema</a>
 </p>
 
 ---
 
-## 📌 Project Overview
+## 📌 Table of Contents
+
+- [📖 Project Overview](#-project-overview)
+- [🎯 Project Objective](#-project-objective)
+- [📊 Project Snapshot](#-project-snapshot)
+- [🗄️ Database Overview](#️-database-overview)
+- [🗃️ Database Tables](#️-database-tables)
+- [🖼️ Database Schema](#️-database-schema)
+- [🔗 Table Relationships](#-table-relationships)
+- [📈 Business Questions & Analysis](#-business-questions--analysis)
+- [🧠 SQL Concepts Used](#-sql-concepts-used)
+- [🛠️ Tools & Technologies](#️-tools--technologies)
+- [🔄 Project Workflow](#-project-workflow)
+- [▶️ How to Run the Project](#️-how-to-run-the-project)
+- [📥 How to Download](#-how-to-download)
+- [🎓 Key Learning Areas](#-key-learning-areas)
+- [💼 Skills Demonstrated](#-skills-demonstrated)
+- [📂 Project Structure](#-project-structure)
+- [⚠️ Important Note](#️-important-note)
+- [🏁 Conclusion](#-conclusion)
+
+---
+
+# 📖 Project Overview
 
 The **Netflix MySQL Data Analytics Project** is a relational database and SQL analysis project designed around a Netflix-style streaming platform.
 
-The project uses **MySQL and SQL** to create, populate, connect, and analyze a relational database containing information about:
+The project uses **MySQL and SQL** to create, populate, connect, and analyze a relational database containing information related to:
 
 - 👤 Customers
-- 🌐 Preferred Languages
+- 🌐 Customer Language Preferences
 - 💳 Payment Methods
 - 📦 Subscription Plans
 - 🎬 Content
 - 🔄 Subscriptions
 - 💰 Payment History
-- 👨‍👩‍👧 Profiles
+- 👥 Profiles
 - 👶 Child Accounts
 - 🧑 Adult Accounts
 - 📺 Viewing History
 - 📱 Devices
 - 🔗 Profile-Device Usage
 
-The project contains **13 relational tables** and **15 SQL analysis questions** covering content viewing, subscriptions, devices, customers, payments, revenue, and viewing behavior.
+The database contains **13 relational tables** and the SQL file includes **15 analytical questions** covering content viewing, subscriptions, devices, customers, profiles, payments, revenue, and viewing behavior.
+
+> **Project interpretation:** The database represents a Netflix-style streaming platform based on the entities and relationships defined in the SQL schema. The project focuses on SQL/database learning and analysis rather than claiming to represent Netflix's actual internal database.
 
 ---
 
 # 🎯 Project Objective
 
-The main objective of this project is to develop practical knowledge of **SQL, MySQL, relational database design, and data analysis**.
+The main objective of this project is to develop practical knowledge of:
 
-### The project focuses on:
+- MySQL
+- SQL
+- Relational database design
+- Database relationships
+- Data aggregation
+- SQL joins
+- Subqueries
+- Common Table Expressions
+- Window functions
+- Ranking analysis
+- Customer analysis
+- Subscription analysis
+- Content analysis
+- Viewing-history analysis
+- Payment and revenue analysis
 
-- Designing a relational database
-- Creating databases and tables
-- Defining primary and foreign keys
-- Working with composite primary keys
-- Inserting sample data
-- Joining multiple tables
-- Performing data aggregation
-- Filtering and grouping data
-- Analyzing customer behavior
-- Analyzing subscription plans
-- Analyzing content and viewing behavior
-- Analyzing payment and revenue information
-- Using subqueries
-- Using Common Table Expressions
-- Using SQL window functions
-- Ranking data using `RANK()`
+### Key Objectives
+
+- Design a relational database
+- Create and manage database tables
+- Define Primary Keys and Foreign Keys
+- Work with composite primary keys
+- Insert sample records
+- Connect related tables using JOINs
+- Perform aggregation and grouping
+- Analyze customer and profile information
+- Analyze subscription plans
+- Analyze content and viewing behavior
+- Analyze payment and revenue information
+- Use subqueries for advanced analysis
+- Use CTEs to structure complex queries
+- Use window functions for ranking analysis
 
 ---
 
-# 🗄️ Database Information
+# 📊 Project Snapshot
 
-| Property | Details |
+| Category | Details |
 |---|---|
-| Database Name | `netflix` |
-| Database Type | Relational Database |
-| DBMS | MySQL |
-| Query Language | SQL |
-| Number of Tables | 13 |
-| Analysis Questions | 15 |
-| Main Focus | Customers, Content, Subscriptions, Viewing & Payments |
+| 🗄️ **Database** | `netflix` |
+| 🐬 **DBMS** | MySQL |
+| 📝 **Language** | SQL |
+| 🗃️ **Tables** | 13 |
+| 📊 **Analysis Questions** | 15 |
+| 🔗 **Database Type** | Relational Database |
+| 🖼️ **Schema** | Included |
+| 📄 **SQL Script** | Included |
+| 🧠 **Advanced SQL** | CTEs, Subqueries & Window Functions |
+| 🎯 **Main Focus** | Customers, Content, Subscriptions, Viewing & Payments |
 
-The database is created using:
+---
+
+# 🗄️ Database Overview
+
+The SQL script creates a database named:
+
+```sql
+netflix
+```
+
+The database is initialized using:
 
 ```sql
 DROP DATABASE IF EXISTS netflix;
@@ -90,65 +147,45 @@ CREATE DATABASE netflix;
 USE netflix;
 ```
 
----
+The database contains 13 related tables covering different areas of the streaming-platform model.
 
-# 📂 Project Structure
+### Main Data Areas
 
 ```text
-netflix-mysql-data-analytics/
-│
-├── netfix_database.sql
-│
-├── schema/
-│   └── netflix_schema.png
-│
-└── README.md
+Customers
+    ↓
+Profiles
+    ↓
+Viewing History
+    ↓
+Content
 ```
 
----
+```text
+Customers
+    ↓
+Subscriptions
+    ↓
+Plans
+```
 
-## 📄 Project Files
+```text
+Customers
+    ↓
+Payment Methods
+    ↓
+Payment History
+```
 
-| File | Description |
-|---|---|
-| `netfix_database.sql` | Complete MySQL database creation, table creation, sample data, and SQL analysis queries |
-| `netflix_schema.png` | Database schema showing tables and relationships |
-| `README.md` | Complete project documentation |
+```text
+Profiles
+    ↓
+Uses
+    ↓
+Devices
+```
 
----
-
-# 🖼️ Database Schema
-
-The schema represents the structure of the Netflix database and shows how the different tables are connected.
-
-<p align="center">
-  <img src="schema/netflix_schema.png"
-       alt="Netflix MySQL Database Schema"
-       width="950">
-</p>
-
----
-
-## 🔗 Main Relationships
-
-The database contains relationships between customers, profiles, subscriptions, payments, content, devices, and viewing history.
-
-Some major relationships include:
-
-- `CustomersLanguagePreferred.CustID → Customers.CustID`
-- `PaymentMethod.CUSTID → Customers.CustID`
-- `Subscribes.CUSTID → Customers.CustID`
-- `Subscribes.PLANID → Plans.PLANID`
-- `PaymentHistory.CardID → PaymentMethod.CardID`
-- `Profiles.CUSTID → Customers.CustID`
-- `ChildAcc.ProfileID → Profiles.ProfileID`
-- `AdultAcc.ProfileID → Profiles.ProfileID`
-- `ViewingHistory.ContentID → Content.ContentID`
-- `ViewingHistory.ProfileID → Profiles.ProfileID`
-- `Uses.DeviceID → Devices.DeviceID`
-- `Uses.ProfileID → Profiles.ProfileID`
-
-These relationships allow data from multiple tables to be combined using SQL joins.
+These relationships allow information from multiple tables to be combined for SQL analysis.
 
 ---
 
@@ -156,33 +193,243 @@ These relationships allow data from multiple tables to be combined using SQL joi
 
 The database contains **13 tables**.
 
-| No. | Table | Description |
+| # | Table | Purpose |
 |---:|---|---|
-| 1 | `Customers` | Stores customer information |
-| 2 | `CustomersLanguagePreferred` | Stores customers' preferred languages |
-| 3 | `Plans` | Stores subscription plan information |
-| 4 | `PaymentMethod` | Stores customer payment method information |
-| 5 | `Content` | Stores movie and TV show information |
-| 6 | `Subscribes` | Stores customer subscription information |
-| 7 | `PaymentHistory` | Stores payment transaction information |
-| 8 | `Profiles` | Stores customer profile information |
-| 9 | `ChildAcc` | Stores child account/profile information |
-| 10 | `AdultAcc` | Stores adult account/profile information |
-| 11 | `ViewingHistory` | Stores content viewing information |
+| 01 | `Customers` | Stores customer information |
+| 02 | `CustomersLanguagePreferred` | Stores customer language preferences |
+| 03 | `Plans` | Stores subscription plan information |
+| 04 | `PaymentMethod` | Stores customer payment-method information |
+| 05 | `Content` | Stores content information |
+| 06 | `Subscribes` | Stores customer subscription information |
+| 07 | `PaymentHistory` | Stores payment transaction information |
+| 08 | `Profiles` | Stores customer profile information |
+| 09 | `ChildAcc` | Stores child-account/profile information |
+| 10 | `AdultAcc` | Stores adult-account/profile information |
+| 11 | `ViewingHistory` | Stores content-viewing information |
 | 12 | `Devices` | Stores device information |
 | 13 | `Uses` | Connects profiles with devices |
 
 ---
 
-# 📊 SQL Analysis Questions
+# 🖼️ Database Schema
 
-The SQL file contains **15 analysis questions**.
+The database schema represents the structure of the project and shows how the different tables are connected.
 
-Each question demonstrates a different practical SQL analysis technique.
+<p align="center">
+  <img
+    src="./schema/netflix_schema.png"
+    alt="Netflix MySQL Database Schema"
+    width="950"
+  >
+</p>
+
+<p align="center">
+  <a href="./schema/netflix_schema.png">
+    🔍 View Full-Size Schema
+  </a>
+</p>
 
 ---
 
-## 🎬 1. Top 3 Most-Watched Movies
+# 🔗 Table Relationships
+
+The database contains several relationships between customers, profiles, subscriptions, payments, content, viewing history, and devices.
+
+### Customer → Language Preference
+
+```text
+Customers.CustID
+       │
+       ▼
+CustomersLanguagePreferred.CustID
+```
+
+Connects customers with their preferred languages.
+
+---
+
+### Customer → Payment Method
+
+```text
+Customers.CustID
+       │
+       ▼
+PaymentMethod.CUSTID
+```
+
+Connects customers with their payment methods.
+
+---
+
+### Customer → Subscription
+
+```text
+Customers.CUSTID
+       │
+       ▼
+Subscribes.CUSTID
+```
+
+Connects customers with their subscription records.
+
+---
+
+### Plan → Subscription
+
+```text
+Plans.PLANID
+       │
+       ▼
+Subscribes.PLANID
+```
+
+Connects subscription records with subscription plans.
+
+---
+
+### Payment Method → Payment History
+
+```text
+PaymentMethod.CardID
+       │
+       ▼
+PaymentHistory.CardID
+```
+
+Connects payment transactions with payment methods.
+
+---
+
+### Customer → Profiles
+
+```text
+Customers.CUSTID
+       │
+       ▼
+Profiles.CUSTID
+```
+
+Connects customers with their profiles.
+
+---
+
+### Profile → Child Account
+
+```text
+Profiles.ProfileID
+       │
+       ▼
+ChildAcc.ProfileID
+```
+
+Connects profiles with child-account records.
+
+---
+
+### Profile → Adult Account
+
+```text
+Profiles.ProfileID
+       │
+       ▼
+AdultAcc.ProfileID
+```
+
+Connects profiles with adult-account records.
+
+---
+
+### Content → Viewing History
+
+```text
+Content.ContentID
+       │
+       ▼
+ViewingHistory.ContentID
+```
+
+Connects content with viewing records.
+
+---
+
+### Profile → Viewing History
+
+```text
+Profiles.ProfileID
+       │
+       ▼
+ViewingHistory.ProfileID
+```
+
+Connects profiles with their viewing history.
+
+---
+
+### Device → Profile Usage
+
+```text
+Devices.DeviceID
+       │
+       ▼
+Uses.DeviceID
+```
+
+Connects devices with profile usage.
+
+---
+
+### Profile → Device Usage
+
+```text
+Profiles.ProfileID
+       │
+       ▼
+Uses.ProfileID
+```
+
+Connects profiles with device usage.
+
+---
+
+# 📈 Business Questions & Analysis
+
+The SQL file contains **15 analysis questions**.
+
+These questions cover:
+
+- 🎬 Content analysis
+- 📺 Viewing behavior
+- 📦 Subscription analysis
+- 📱 Device analysis
+- 👤 Customer analysis
+- 👥 Profile analysis
+- 💳 Payment analysis
+- 💰 Revenue analysis
+
+| # | Analysis Question | Purpose |
+|---:|---|---|
+| 01 | 🎬 Top 3 Most-Watched Movies | Finds the top movies based on total viewing hours |
+| 02 | 🎭 Top Genre in Each Category | Finds the highest-ranked genre within each category |
+| 03 | 📦 Subscriptions for Each Plan | Analyzes subscription records associated with plans |
+| 04 | 📱 Most Commonly Used Device Type | Finds the most frequently used device type |
+| 05 | ⏱️ Average Viewing Time | Compares average viewing time for movies and TV shows |
+| 06 | 🌐 Most Preferred Customer Language | Finds the most frequently preferred customer language |
+| 07 | 👨‍👧 Adult vs Child Accounts | Compares customers associated with adult and child accounts |
+| 08 | 👥 Average Profiles per Customer | Calculates the average number of profiles per customer |
+| 09 | 🎬 Lowest Average Viewing Time | Finds content with the lowest average viewing time |
+| 10 | 📚 Content Count by Category | Counts content items within each category |
+| 11 | ♾️ Unlimited vs Non-Unlimited Access | Identifies customers by content-access type |
+| 12 | 💰 Average Price of Unlimited Plans | Calculates average monthly price for unlimited plans |
+| 13 | 💳 Payment Methods Expiring in 2028+ | Finds customers with payment methods expiring from 2028 onward |
+| 14 | 🏙️ Average Revenue by City | Calculates and ranks average payment amounts by city |
+| 15 | 🔞 Adult Genre Viewing Analysis | Finds the most frequently viewed genre among adults by category |
+
+---
+
+# 🔍 Analysis Details
+
+<details>
+<summary><strong>01 — Top 3 Most-Watched Movies</strong></summary>
 
 ### Question
 
@@ -192,7 +439,7 @@ Find the top 3 most-watched movies based on total viewing hours.
 
 Identifies the three movies with the highest total viewing time.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -202,9 +449,12 @@ ORDER BY
 LIMIT
 ```
 
+</details>
+
 ---
 
-## 🎭 2. Top Genre in Each Category
+<details>
+<summary><strong>02 — Top Genre in Each Category</strong></summary>
 
 ### Question
 
@@ -212,9 +462,9 @@ Find the top genre in each category using ranking.
 
 ### Explanation
 
-Identifies the highest-ranked genre within each content category.
+Ranks genres within each content category and identifies the highest-ranked genre.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 CTE
@@ -223,19 +473,22 @@ PARTITION BY
 GROUP BY
 ```
 
+</details>
+
 ---
 
-## 📦 3. Subscriptions for Each Plan
+<details>
+<summary><strong>03 — Subscriptions for Each Plan</strong></summary>
 
 ### Question
 
-Find the subscriptions associated with each subscription plan.
+Analyze subscriptions associated with each subscription plan.
 
 ### Explanation
 
-Shows the subscription information associated with different plans.
+Connects subscription records with plans and summarizes subscription activity.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -243,9 +496,12 @@ GROUP BY
 COUNT()
 ```
 
+</details>
+
 ---
 
-## 📱 4. Most Commonly Used Device Type
+<details>
+<summary><strong>04 — Most Commonly Used Device Type</strong></summary>
 
 ### Question
 
@@ -253,9 +509,9 @@ Find the device type that is used most frequently.
 
 ### Explanation
 
-Identifies the device type appearing most frequently in the usage data.
+Counts device usage records and identifies the most frequently appearing device type.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -264,9 +520,12 @@ GROUP BY
 ORDER BY
 ```
 
+</details>
+
 ---
 
-## ⏱️ 5. Average Viewing Time: Movies vs TV Shows
+<details>
+<summary><strong>05 — Average Viewing Time: Movies vs TV Shows</strong></summary>
 
 ### Question
 
@@ -274,9 +533,9 @@ Calculate the average viewing time for movies and TV shows.
 
 ### Explanation
 
-Compares the average viewing duration between movies and TV shows.
+Compares average viewing duration between different content types.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -284,11 +543,12 @@ AVG()
 GROUP BY
 ```
 
+</details>
+
 ---
 
-# 👤 Customer & Profile Analysis
-
-## 🌐 6. Most Preferred Customer Language
+<details>
+<summary><strong>06 — Most Preferred Customer Language</strong></summary>
 
 ### Question
 
@@ -296,9 +556,9 @@ Find the language most preferred by customers.
 
 ### Explanation
 
-Identifies the language that appears most frequently among customer language preferences.
+Counts customer language preferences and identifies the most frequently appearing language.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -307,9 +567,12 @@ GROUP BY
 ORDER BY
 ```
 
+</details>
+
 ---
 
-## 👨‍👧 7. Adult vs Child Account Customers
+<details>
+<summary><strong>07 — Adult vs Child Account Customers</strong></summary>
 
 ### Question
 
@@ -317,9 +580,9 @@ Compare the number of customers associated with adult and child accounts.
 
 ### Explanation
 
-Provides a comparison between customers associated with adult and child accounts.
+Uses separate account information and combines the results for comparison.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -327,9 +590,12 @@ COUNT()
 UNION ALL
 ```
 
+</details>
+
 ---
 
-## 👥 8. Average Number of Profiles per Customer
+<details>
+<summary><strong>08 — Average Number of Profiles per Customer</strong></summary>
 
 ### Question
 
@@ -337,9 +603,9 @@ Calculate the average number of profiles associated with each customer.
 
 ### Explanation
 
-Determines the average number of profiles created or associated with customers.
+Calculates profile counts per customer and then derives the overall average.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 Subquery
@@ -348,9 +614,12 @@ AVG()
 GROUP BY
 ```
 
+</details>
+
 ---
 
-## 🎬 9. Content with the Lowest Average Viewing Time
+<details>
+<summary><strong>09 — Content with the Lowest Average Viewing Time</strong></summary>
 
 ### Question
 
@@ -358,9 +627,9 @@ Find the content with the lowest average viewing time per user.
 
 ### Explanation
 
-Identifies the content having the smallest average viewing duration.
+Calculates average viewing duration for content and identifies the lowest average.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -369,9 +638,12 @@ GROUP BY
 ORDER BY
 ```
 
+</details>
+
 ---
 
-## 📚 10. Content Count by Category
+<details>
+<summary><strong>10 — Content Count by Category</strong></summary>
 
 ### Question
 
@@ -379,9 +651,9 @@ Calculate the number of content items available in each category.
 
 ### Explanation
 
-Shows how many content records belong to each category.
+Groups content by category and counts the records in each category.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 COUNT()
@@ -389,11 +661,12 @@ GROUP BY
 ORDER BY
 ```
 
+</details>
+
 ---
 
-# 💳 Subscription & Payment Analysis
-
-## ♾️ 11. Unlimited vs Non-Unlimited Content Access
+<details>
+<summary><strong>11 — Unlimited vs Non-Unlimited Content Access</strong></summary>
 
 ### Question
 
@@ -401,9 +674,9 @@ Find customers with unlimited and non-unlimited content access.
 
 ### Explanation
 
-Classifies customers according to the content-access type of their subscription plan.
+Uses subscription-plan information to identify customers according to their content-access type.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -411,9 +684,12 @@ WHERE
 DISTINCT
 ```
 
+</details>
+
 ---
 
-## 💰 12. Average Monthly Price of Unlimited Plans
+<details>
+<summary><strong>12 — Average Monthly Price of Unlimited Plans</strong></summary>
 
 ### Question
 
@@ -421,9 +697,9 @@ Calculate the average monthly price of plans that provide unlimited content acce
 
 ### Explanation
 
-Calculates the average monthly price among unlimited-access plans.
+Filters unlimited-access plans and calculates their average monthly price.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 AVG()
@@ -431,9 +707,12 @@ WHERE
 HAVING
 ```
 
+</details>
+
 ---
 
-## 💳 13. Customers with Payment Methods Expiring in 2028 or Later
+<details>
+<summary><strong>13 — Customers with Payment Methods Expiring in 2028 or Later</strong></summary>
 
 ### Question
 
@@ -441,9 +720,9 @@ Find customers whose payment-method expiration year is 2028 or later.
 
 ### Explanation
 
-Identifies customers whose payment method has an expiration year of 2028 or later.
+Extracts the expiration year and filters payment methods according to the specified year.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -452,11 +731,12 @@ CONCAT()
 ORDER BY
 ```
 
+</details>
+
 ---
 
-# 💰 Revenue & Advanced Analysis
-
-## 🏙️ 14. Average Revenue by City and City Ranking
+<details>
+<summary><strong>14 — Average Revenue by City and City Ranking</strong></summary>
 
 ### Question
 
@@ -464,9 +744,9 @@ Calculate the average payment amount by city and rank cities based on average re
 
 ### Explanation
 
-Calculates average payment amounts for cities and assigns rankings.
+Calculates average payment amounts for cities and uses ranking to compare city-level results.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -476,9 +756,12 @@ RANK()
 PARTITION BY
 ```
 
+</details>
+
 ---
 
-## 🔞 15. Most Frequently Viewed Genre Among Adults
+<details>
+<summary><strong>15 — Most Frequently Viewed Genre Among Adults</strong></summary>
 
 ### Question
 
@@ -486,9 +769,9 @@ Find the most frequently viewed genre among adult profiles for each content cate
 
 ### Explanation
 
-Analyzes adult viewing history to identify the most frequently viewed genre within each category.
+Filters adult profile viewing activity and ranks genres within each category.
 
-### Concepts Used
+### SQL Concepts
 
 ```text
 JOIN
@@ -498,31 +781,33 @@ PARTITION BY
 GROUP BY
 ```
 
+</details>
+
 ---
 
 # 🧠 SQL Concepts Used
 
-This project demonstrates several important SQL and database concepts.
+This project demonstrates both fundamental and advanced SQL concepts.
 
 ---
 
-## 🏗️ DDL — Data Definition Language
+## 🏗️ 1. DDL — Data Definition Language
 
-Used for creating and managing database structures.
+Used to create and manage database structures.
 
 ```sql
-CREATE DATABASE
 DROP DATABASE
-CREATE TABLE
-DROP TABLE
+CREATE DATABASE
 USE
+DROP TABLE
+CREATE TABLE
 ```
 
 ---
 
-## 📝 DML — Data Manipulation Language
+## 📝 2. DML — Data Manipulation Language
 
-Used to insert data into database tables.
+Used to insert records into the database.
 
 ```sql
 INSERT INTO
@@ -530,9 +815,9 @@ INSERT INTO
 
 ---
 
-## 🔗 SQL Joins
+## 🔗 3. SQL JOINs
 
-The project uses joins to combine information stored in related tables.
+JOINs are used to combine related information stored across multiple tables.
 
 ```sql
 JOIN
@@ -540,9 +825,9 @@ JOIN
 
 ---
 
-## 📊 Aggregate Functions
+## 📊 4. Aggregate Functions
 
-Used to summarize and analyze data.
+Used to summarize and calculate metrics.
 
 ```sql
 COUNT()
@@ -554,9 +839,9 @@ ROUND()
 
 ---
 
-## 🔍 Filtering
+## 🔍 5. Filtering
 
-Used to filter records according to specific conditions.
+Used to retrieve records according to specific conditions.
 
 ```sql
 WHERE
@@ -565,7 +850,7 @@ DISTINCT
 
 ---
 
-## 📋 Grouping & Sorting
+## 📋 6. Grouping & Sorting
 
 Used to organize analytical results.
 
@@ -578,7 +863,7 @@ LIMIT
 
 ---
 
-## 🧩 Common Table Expressions
+## 🧩 7. Common Table Expressions
 
 The project uses:
 
@@ -586,11 +871,11 @@ The project uses:
 WITH
 ```
 
-CTEs help structure complex queries and make them easier to understand.
+CTEs help break complex analysis into logical steps.
 
 ---
 
-## 🏆 Window Functions
+## 🏆 8. Window Functions
 
 The project uses:
 
@@ -598,23 +883,25 @@ The project uses:
 RANK() OVER()
 ```
 
-Window functions are used to calculate rankings without collapsing the result into a single row per group.
+Window functions allow ranking records while retaining the underlying grouped information.
 
 ---
 
-## 📌 PARTITION BY
+## 📌 9. PARTITION BY
 
-Used with window functions to perform ranking within specific groups.
+Used with window functions to perform rankings within specific groups.
 
 ```sql
 PARTITION BY
 ```
 
+For example, ranking genres separately within each content category.
+
 ---
 
-## 🔄 UNION ALL
+## 🔄 10. UNION ALL
 
-Used to combine the results of multiple queries.
+Used to combine results from multiple queries.
 
 ```sql
 UNION ALL
@@ -622,19 +909,25 @@ UNION ALL
 
 ---
 
-## 🔎 Subqueries
+## 🔎 11. Subqueries
 
-Subqueries are used when one query needs the result of another query for further analysis.
+Subqueries are used when the result of one query is required by another query.
+
+They are useful for more complex analytical calculations and filtering.
 
 ---
 
-## 🔑 Database Keys
+## 🔑 12. Database Keys
 
 The database demonstrates:
 
-- Primary Keys
-- Foreign Keys
-- Composite Primary Keys
+```text
+Primary Keys
+Foreign Keys
+Composite Primary Keys
+```
+
+Composite primary keys are used in selected tables where multiple columns together identify a record.
 
 ---
 
@@ -642,18 +935,18 @@ The database demonstrates:
 
 | Tool / Technology | Purpose |
 |---|---|
-| 🐬 **MySQL** | Database creation and management |
+| 🐬 **MySQL** | Relational database management |
 | 📝 **SQL** | Data querying and analysis |
 | 💻 **MySQL Workbench** | SQL development and execution |
-| 🗄️ **Relational Database** | Structured data storage |
-| 🔗 **Primary & Foreign Keys** | Table relationships |
-| 📊 **SQL Analytics** | Data analysis and reporting |
+| 🗄️ **Relational Database** | Structured data organization |
+| 🔗 **Primary & Foreign Keys** | Establishing table relationships |
+| 📊 **SQL Analytics** | Data analysis and business-oriented querying |
 
 ---
 
 # 🔄 Project Workflow
 
-The project follows a structured database and SQL analysis workflow.
+The project follows a structured database and SQL analytics workflow.
 
 ```text
         ┌─────────────────────────┐
@@ -661,20 +954,21 @@ The project follows a structured database and SQL analysis workflow.
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │   Create Database       │
+        │    Create Database      │
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │   Create 13 Tables      │
+        │     Create Tables       │
+        │       13 Tables         │
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │   Define Relationships  │
-        │ Primary & Foreign Keys  │
+        │ Define Keys & Relations │
+        │ Primary / Foreign Keys  │
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │   Insert Sample Data    │
+        │     Insert Data         │
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
@@ -682,16 +976,20 @@ The project follows a structured database and SQL analysis workflow.
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │    Write SQL Queries    │
+        │     Write SQL Queries   │
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │   Analyze the Data      │
+        │   Aggregate & Filter    │
         └────────────┬────────────┘
                      ↓
         ┌─────────────────────────┐
-        │ Advanced SQL Analysis   │
-        │ CTEs, Subqueries, Rank  │
+        │    Advanced SQL         │
+        │ CTE • Subquery • Rank   │
+        └────────────┬────────────┘
+                     ↓
+        ┌─────────────────────────┐
+        │      Analyze Results    │
         └─────────────────────────┘
 ```
 
@@ -707,62 +1005,78 @@ Create the `netflix` database.
 
 Create the 13 tables required for the project.
 
-### 3️⃣ Key & Relationship Definition
+### 3️⃣ Keys & Relationships
 
-Define primary keys, foreign keys, and composite keys.
+Define primary keys, foreign keys, and composite primary keys where specified in the SQL schema.
 
 ### 4️⃣ Data Insertion
 
-Insert sample records into the tables.
+Insert the sample records provided in the SQL file.
 
-### 5️⃣ Data Exploration
+### 5️⃣ Database Exploration
 
-Explore the available customer, content, subscription, device, and payment data.
+Explore customers, profiles, content, subscriptions, devices, viewing history, and payment information.
 
-### 6️⃣ SQL Query Development
+### 6️⃣ Query Development
 
-Write SQL queries to answer analytical questions.
+Develop SQL queries to answer the 15 analytical questions.
 
 ### 7️⃣ Data Aggregation
 
-Use functions such as `COUNT()`, `SUM()`, and `AVG()`.
+Use functions such as:
+
+```sql
+COUNT()
+SUM()
+AVG()
+ROUND()
+```
+
+to summarize data.
 
 ### 8️⃣ Advanced SQL Analysis
 
-Use CTEs, subqueries, `RANK()`, and `PARTITION BY`.
+Apply:
 
-### 9️⃣ Business-Oriented Analysis
+```text
+CTEs
+Subqueries
+RANK()
+PARTITION BY
+UNION ALL
+```
 
-Use SQL to answer questions related to customers, content, subscriptions, viewing, payments, and revenue.
+where required.
+
+### 9️⃣ Analytical Interpretation
+
+Use the query results to examine customers, content, subscriptions, viewing behavior, devices, payments, and revenue.
 
 ---
 
 # 📥 How to Download the Project
 
-## Method 1 — Download ZIP
+## Option 1 — Download ZIP
 
 1. Open the GitHub repository.
 2. Click the **Code** button.
-3. Click **Download ZIP**.
-4. Extract the ZIP file.
+3. Select **Download ZIP**.
+4. Extract the downloaded ZIP file.
 5. Open the project folder.
-6. Locate:
+
+The project will be located at:
 
 ```text
-netfix_database.sql
-```
-
-and:
-
-```text
-schema/netflix_schema.png
+Data-Analytics-Portfolio/
+└── MySQL/
+    └── netflix-mysql-data-analytics/
 ```
 
 ---
 
-## Method 2 — Clone the Repository
+## Option 2 — Clone the Repository
 
-If Git is installed on your system, open **Git Bash** or **Command Prompt** and run:
+If Git is installed, open **Git Bash** or **Command Prompt** and run:
 
 ```bash
 git clone https://github.com/YogirajSharma/Data-Analytics-Portfolio.git
@@ -785,13 +1099,13 @@ Install:
 - MySQL Server
 - MySQL Workbench
 
-Make sure your MySQL Server is running.
+Make sure the MySQL Server is running.
 
 ---
 
 ## Step 2 — Open MySQL Workbench
 
-Open **MySQL Workbench** and connect to your MySQL server.
+Open **MySQL Workbench** and connect to your MySQL Server.
 
 ---
 
@@ -800,38 +1114,40 @@ Open **MySQL Workbench** and connect to your MySQL server.
 Open:
 
 ```text
-netfix_database.sql
+netflix_database.sql
 ```
 
-In MySQL Workbench, select:
+In MySQL Workbench:
 
 ```text
-File → Open SQL Script
+File
+  ↓
+Open SQL Script
+  ↓
+netflix_database.sql
 ```
-
-Then select the SQL file.
 
 ---
 
-## Step 4 — Execute the SQL Script
+## Step 4 — Execute the Script
 
 Click the **Execute** button in MySQL Workbench.
 
-The script will:
+The script contains commands for:
 
-1. Create the `netflix` database.
-2. Create the required tables.
-3. Define table relationships.
-4. Insert sample data.
-5. Execute the SQL analysis queries.
+1. Creating the `netflix` database
+2. Creating database tables
+3. Defining relationships
+4. Inserting sample records
+5. Running the included SQL analysis queries
 
 ---
 
-## Step 5 — Refresh the Database
+## Step 5 — Refresh the Schema
 
-After executing the script, refresh the **Schemas** section in MySQL Workbench.
+Refresh the **Schemas** section in MySQL Workbench.
 
-You should find:
+You should see:
 
 ```text
 netflix
@@ -853,32 +1169,35 @@ netflix
 
 ---
 
-## Step 6 — Run Individual Queries
+## Step 6 — Run Individual Analysis Queries
 
 The SQL file contains 15 analysis questions.
 
-You can execute the queries individually to understand how each analysis works.
+For learning purposes:
 
-For learning purposes, try to:
+```text
+Read the Question
+       ↓
+Identify Required Tables
+       ↓
+Understand Relationships
+       ↓
+Write / Read the SQL Query
+       ↓
+Execute the Query
+       ↓
+Review the Result
+```
 
-- Read the question first
-- Understand the tables involved
-- Identify the required relationships
-- Write the query
-- Execute the query
-- Analyze the result
+This makes the project useful for practicing SQL step by step.
 
 ---
 
 # 🎓 Key Learning Areas
 
-This project provides practical experience in the following areas.
-
----
-
 ## 🗄️ 1. Relational Database Design
 
-Understanding how multiple tables can be designed to represent different parts of a real-world system.
+Understanding how different entities can be represented using separate but related tables.
 
 ---
 
@@ -888,13 +1207,13 @@ Understanding how keys identify records and establish relationships between tabl
 
 ---
 
-## 🧩 3. Composite Keys
+## 🧩 3. Composite Primary Keys
 
-Understanding how multiple columns can work together as a primary key.
+Understanding how multiple columns can collectively identify a record.
 
 ---
 
-## 🔗 4. SQL Joins
+## 🔗 4. SQL JOINs
 
 Learning how to combine information from multiple related tables.
 
@@ -911,13 +1230,17 @@ AVG()
 ROUND()
 ```
 
-to calculate useful metrics.
+to calculate analytical metrics.
 
 ---
 
-## 🔍 6. Data Filtering
+## 🔍 6. Filtering
 
-Using `WHERE` and other filtering techniques to retrieve specific records.
+Using conditions to retrieve specific records.
+
+```sql
+WHERE
+```
 
 ---
 
@@ -937,13 +1260,19 @@ to organize analytical results.
 
 ## 🔎 8. Subqueries
 
-Using queries inside other queries for more advanced analysis.
+Using queries inside other queries for advanced analysis.
 
 ---
 
 ## 🧱 9. Common Table Expressions
 
-Using `WITH` to structure complex SQL queries.
+Using:
+
+```sql
+WITH
+```
+
+to structure complex SQL queries.
 
 ---
 
@@ -955,13 +1284,13 @@ Using:
 RANK() OVER()
 ```
 
-to rank records within groups.
+to perform ranking analysis.
 
 ---
 
 ## 📌 11. PARTITION BY
 
-Understanding how window functions can perform calculations separately within groups.
+Performing window-function calculations separately within groups.
 
 ---
 
@@ -971,21 +1300,27 @@ Combining results from multiple queries.
 
 ---
 
-## 🎬 13. Content Analysis
+## 🎬 13. Content & Viewing Analysis
 
-Analyzing movies, TV shows, categories, genres, and viewing time.
-
----
-
-## 👤 14. Customer Analysis
-
-Analyzing customers, profiles, languages, and account types.
+Analyzing content categories, genres, viewing time, and viewing behavior.
 
 ---
 
-## 💳 15. Subscription & Payment Analysis
+## 👤 14. Customer & Profile Analysis
 
-Analyzing plans, subscriptions, payment methods, payment history, and pricing.
+Analyzing customers, preferred languages, profiles, and account types.
+
+---
+
+## 📦 15. Subscription Analysis
+
+Analyzing plans, subscription records, and content-access types.
+
+---
+
+## 💳 16. Payment & Revenue Analysis
+
+Analyzing payment methods, payment history, payment amounts, and city-level average payment values.
 
 ---
 
@@ -995,21 +1330,26 @@ Through this project, the following technical skills are demonstrated:
 
 - 🐬 MySQL
 - 📝 SQL
-- 🗄️ Database Design
-- 🔗 SQL Joins
+- 🗄️ Relational Database Design
+- 🔗 SQL JOINs
 - 🔑 Primary Keys
 - 🔐 Foreign Keys
-- 🧩 Composite Keys
+- 🧩 Composite Primary Keys
 - 📊 Aggregate Functions
 - 🔍 Data Filtering
-- 📋 Data Grouping
-- 🧱 CTEs
+- 📋 GROUP BY & HAVING
+- ↕️ ORDER BY & LIMIT
 - 🔎 Subqueries
+- 🧱 Common Table Expressions
 - 🏆 Window Functions
 - 📈 Ranking Analysis
+- 📌 PARTITION BY
 - 🔄 UNION ALL
 - 🎬 Content Analysis
 - 👤 Customer Analysis
+- 👥 Profile Analysis
+- 📦 Subscription Analysis
+- 📺 Viewing Analysis
 - 💳 Payment Analysis
 - 💰 Revenue Analysis
 
@@ -1019,33 +1359,77 @@ Through this project, the following technical skills are demonstrated:
 
 | Area | Details |
 |---|---|
-| Database | `netflix` |
-| Tables | 13 |
-| SQL Questions | 15 |
-| Database Type | Relational |
-| DBMS | MySQL |
-| Main Language | SQL |
-| Schema | Included |
-| Sample Data | Included in SQL script |
-| Advanced SQL | CTEs, Subqueries & Window Functions |
+| 🗄️ Database | `netflix` |
+| 📋 Tables | **13** |
+| 📊 SQL Questions | **15** |
+| 🔗 Database Type | Relational |
+| 🐬 DBMS | **MySQL** |
+| 📝 Main Language | **SQL** |
+| 🖼️ Schema | Included |
+| 📄 SQL Script | Included |
+| 🧠 Advanced SQL | CTEs, Subqueries & Window Functions |
+| 🎯 Analysis Areas | Customers, Content, Subscriptions, Viewing, Devices & Payments |
 
 ---
 
-# 📁 Quick Project Links
+# 📂 Project Structure
 
-## 📝 SQL Database & Analysis
+```text
+netflix-mysql-data-analytics/
+│
+├── 📄 netflix_database.sql
+│
+├── 📁 schema/
+│   └── 🖼️ netflix_schema.png
+│
+└── 📄 README.md
+```
 
-[Open `netfix_database.sql`](https://github.com/YogirajSharma/Data-Analytics-Portfolio/blob/main/MySQL/netflix-mysql-data-analytics/netflix_database.sql)
+### File Details
 
-## 🖼️ Database Schema
+| File | Description |
+|---|---|
+| `netflix_database.sql` | Complete MySQL database creation, table definitions, sample data, and SQL analysis queries |
+| `schema/netflix_schema.png` | Database schema showing tables and relationships |
+| `README.md` | Complete project documentation |
 
-[Open `netflix_schema.png`](https://github.com/YogirajSharma/Data-Analytics-Portfolio/tree/main/MySQL/netflix-mysql-data-analytics/schema)
+---
+
+# 🔗 Quick Project Links
+
+<p align="center">
+
+<a href="./netflix_database.sql">
+<img src="https://img.shields.io/badge/📄%20SQL%20Script-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL Script">
+</a>
+
+<a href="./schema/netflix_schema.png">
+<img src="https://img.shields.io/badge/🗺️%20Database%20Schema-2E8B57?style=for-the-badge" alt="Database Schema">
+</a>
+
+</p>
+
+---
+
+# ⚠️ Important Note
+
+The SQL script begins with:
+
+```sql
+DROP DATABASE IF EXISTS netflix;
+```
+
+This means that an existing database named `netflix` will be removed before the project database is recreated.
+
+> **⚠️ Warning:** Do not execute the complete script against an existing `netflix` database containing important data.
+
+For a learning or portfolio environment, this allows the database to be recreated from the SQL script.
 
 ---
 
 # 📚 What This Project Demonstrates
 
-This project demonstrates how SQL can be used to move from a structured database to analytical insights:
+The project demonstrates a complete SQL workflow:
 
 ```text
 Database
@@ -1058,62 +1442,91 @@ Sample Data
     ↓
 SQL Queries
     ↓
-Data Aggregation
+JOINs & Aggregations
     ↓
-Advanced SQL
+Subqueries & CTEs
+    ↓
+Window Functions
     ↓
 Analysis
 ```
 
-The project combines database management and analytical SQL in a single practical project.
+It combines **relational database management** and **SQL data analysis** in one practical project.
 
 ---
 
 # 🏁 Conclusion
 
-The **Netflix MySQL Data Analytics Project** provides practical experience in designing and analyzing a relational database using MySQL and SQL.
+The **Netflix MySQL Data Analytics Project** provides practical experience in designing and analyzing a relational database using **MySQL and SQL**.
 
-The project covers the complete process from **database creation and table design to data insertion and analytical querying**.
+The project covers the complete process from:
 
-It demonstrates important SQL concepts such as:
+```text
+Database Creation
+       ↓
+Table Design
+       ↓
+Relationships
+       ↓
+Data Insertion
+       ↓
+SQL Querying
+       ↓
+Data Analysis
+```
 
-- Joins
-- Aggregate Functions
-- Grouping
-- Filtering
-- Subqueries
-- CTEs
-- Window Functions
-- Ranking
-- `PARTITION BY`
-- `UNION ALL`
-- Primary Keys
-- Foreign Keys
-- Composite Keys
+The 15 analytical questions provide hands-on practice in analyzing:
 
-The 15 analytical questions provide hands-on practice in analyzing **customers, content, subscriptions, devices, viewing behavior, payments, and revenue**.
+- 👤 Customers
+- 👥 Profiles
+- 🎬 Content
+- 📺 Viewing History
+- 📦 Subscriptions
+- 📱 Devices
+- 💳 Payment Methods
+- 💰 Payment History
 
-This project helped strengthen practical skills in **SQL, relational database management, and data analytics**, while providing a strong foundation for more advanced database and business intelligence projects.
+The project also demonstrates important SQL concepts including:
+
+```text
+JOINs
+Aggregate Functions
+GROUP BY
+HAVING
+Subqueries
+CTEs
+RANK()
+PARTITION BY
+UNION ALL
+Primary Keys
+Foreign Keys
+Composite Primary Keys
+```
+
+Overall, this project strengthens practical skills in **MySQL, SQL, relational database design, advanced SQL querying, and data analytics**.
 
 ---
 
 # ⭐ Project Summary
 
-> **A complete MySQL and SQL Data Analytics project focused on relational database design, customer analysis, content analysis, subscription analysis, viewing behavior, payment analysis, and advanced SQL querying.**
+> **A practical MySQL and SQL Data Analytics project focused on relational database design, customer analysis, content analysis, subscription analysis, viewing behavior, device usage, payment analysis, and advanced SQL querying.**
 
 ---
 
 <p align="center">
 
-### 🎬 Netflix MySQL Data Analytics Project
+<strong>🎬 Netflix MySQL Data Analytics</strong>
 
-**Built with MySQL & SQL**
+<br>
+
+<sub>
+MySQL • SQL • Database Design • Data Analytics
+</sub>
+
+<br><br>
+
+<a href="https://github.com/YogirajSharma/Data-Analytics-Portfolio">
+<img src="https://img.shields.io/badge/🔗%20Data%20Analytics%20Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Data Analytics Portfolio">
+</a>
 
 </p>
-
-<p align="center">
-
-⭐ If you found this project useful, consider giving the repository a star!
-
-</p>
-
