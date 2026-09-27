@@ -1,79 +1,120 @@
-# 🍔 Zomato MySQL Data Analytics Project
+# 🍔 Zomato MySQL Data Analytics
 
 <p align="center">
-  <strong>MySQL Database Design & SQL Data Analytics Project</strong>
+  <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
+  <img src="https://img.shields.io/badge/SQL-Data%20Analytics-CC2927?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/Database%20Design-2E8B57?style=for-the-badge" alt="Database Design">
+  <img src="https://img.shields.io/badge/Data%20Analysis-6A5ACD?style=for-the-badge" alt="Data Analysis">
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/SQL-Data%20Analytics-CC2927?style=for-the-badge&logo=mysql&logoColor=white">
-  <img src="https://img.shields.io/badge/Database-Design-2E8B57?style=for-the-badge">
-  <img src="https://img.shields.io/badge/Data-Analysis-6A5ACD?style=for-the-badge">
+  <strong>Relational Database Design • SQL Analytics • Business Analysis</strong>
+</p>
+
+<p align="center">
+  A practical MySQL project focused on analyzing customers, restaurants,
+  food items, orders, delivery performance, employees, and payments.
+</p>
+
+<p align="center">
+  <a href="./zomato_database.sql">📄 View SQL Script</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="./schema/zomato_schema.png">🗺️ View Database Schema</a>
 </p>
 
 ---
 
-## 📌 Project Overview
+## 📌 Table of Contents
 
-The **Zomato MySQL Data Analytics Project** is a relational database and SQL analysis project based on a food-ordering and delivery platform.
+- [📖 Project Overview](#-project-overview)
+- [🎯 Project Objective](#-project-objective)
+- [📊 Project Snapshot](#-project-snapshot)
+- [🗄️ Database Overview](#️-database-overview)
+- [🏗️ Database Architecture](#️-database-architecture)
+- [🗃️ Database Tables](#️-database-tables)
+- [🖼️ Database Schema](#️-database-schema)
+- [🔗 Table Relationships](#-table-relationships)
+- [📈 Business Questions & Analysis](#-business-questions--analysis)
+- [🧠 SQL Concepts Used](#-sql-concepts-used)
+- [🛠️ Tools & Technologies](#️-tools--technologies)
+- [🔄 Project Workflow](#-project-workflow)
+- [▶️ How to Run the Project](#️-how-to-run-the-project)
+- [📥 How to Download](#-how-to-download)
+- [🎓 Key Learning Areas](#-key-learning-areas)
+- [💼 Skills Demonstrated](#-skills-demonstrated)
+- [📂 Project Structure](#-project-structure)
+- [⚠️ Important Note](#️-important-note)
+- [🏁 Conclusion](#-conclusion)
 
-This project uses **MySQL and SQL** to create, populate, connect, and analyze a relational database containing information about:
+---
+
+# 📖 Project Overview
+
+The **Zomato MySQL Data Analytics Project** is a relational database and SQL analysis project built to practice real-world data analysis using **MySQL**.
+
+The database models a food-ordering and delivery environment containing information about:
 
 - 👤 Customers
 - 🍴 Restaurants
-- 👨‍💼 Zomato Employees
+- 👨‍💼 Employees
 - 🍕 Food Items
 - 📦 Orders
 - 💳 Payments
 - 🛒 Ordered Food Items
 
-The project contains a complete SQL database script, a database schema diagram, and **15 SQL analysis questions**.
+The project combines **database design** with **SQL-based analysis** to answer practical questions related to customer behavior, restaurant performance, food demand, order activity, delivery time, employee ratings, and payment analysis.
 
-The analysis focuses on customers, restaurants, food items, orders, delivery time, employees, and payment information.
+This project is designed to demonstrate how a Data Analyst can use SQL to work with structured relational data and convert it into meaningful analytical results.
 
 ---
 
 # 🎯 Project Objective
 
-The main objective of this project is to develop practical knowledge of **MySQL, SQL, relational database design, and data analytics**.
+The main objective of this project is to build practical knowledge of **MySQL, SQL, relational database design, and data analytics**.
 
-### The project focuses on:
+### Key objectives
 
-- Creating a relational database
-- Creating and managing tables
-- Defining Primary Keys
-- Defining Foreign Keys
-- Inserting sample data
-- Connecting tables using JOINs
-- Performing data aggregation
-- Filtering and sorting data
-- Analyzing customer orders
-- Analyzing restaurant performance
-- Analyzing food popularity
-- Analyzing delivery time
-- Analyzing employee ratings
-- Analyzing payment methods
-- Using subqueries
-- Using CTEs
-- Using CASE expressions
-- Using SQL window functions
-- Using ranking functions
+- Design a relational database
+- Create and manage multiple SQL tables
+- Define Primary Key and Foreign Key relationships
+- Insert and work with structured data
+- Combine data using SQL JOINs
+- Perform aggregations and calculations
+- Analyze customer ordering behavior
+- Analyze restaurant performance
+- Analyze food-item popularity and pricing
+- Analyze delivery performance
+- Analyze employee ratings
+- Analyze payment information
+- Apply advanced SQL techniques
 
 ---
 
-# 🗄️ Database Information
+# 📊 Project Snapshot
 
-| Property | Details |
+| Category | Details |
 |---|---|
-| Database / Schema | `zomatodb` |
-| Database Type | Relational Database |
-| DBMS | MySQL |
-| Query Language | SQL |
-| Number of Tables | 7 |
-| Analysis Questions | 15 |
-| Main Focus | Customers, Orders, Restaurants, Food, Delivery & Payments |
+| 🗄️ **Database** | `zomatodb` |
+| 🐬 **DBMS** | MySQL |
+| 📝 **Language** | SQL |
+| 🗃️ **Tables** | 7 |
+| 📊 **Analysis Questions** | 15 |
+| 🔗 **Database Type** | Relational |
+| 🖼️ **Schema** | Included |
+| 📄 **SQL Script** | Included |
+| 🧠 **Advanced SQL** | CTEs, Subqueries, CASE & Window Functions |
 
-The SQL script creates the database using:
+---
+
+# 🗄️ Database Overview
+
+The project creates a MySQL schema named:
+
+```sql
+zomatodb
+```
+
+The SQL script initializes the database using:
 
 ```sql
 DROP SCHEMA IF EXISTS zomatodb;
@@ -83,126 +124,61 @@ CREATE SCHEMA zomatodb;
 USE zomatodb;
 ```
 
-> ⚠️ **Important:** The SQL script starts with `DROP SCHEMA IF EXISTS zomatodb;`. If a schema named `zomatodb` already exists, it will be removed before the new schema is created.
+The database is organized into seven related tables.
+
+```text
+Customer
+   │
+   ▼
+Order Detail
+   │
+   ├──────────────► Restaurant
+   │
+   ├──────────────► Zomato Employee
+   │
+   ├──────────────► Payment
+   │
+   └──────────────► Order Food
+                         │
+                         ▼
+                       Foods
+```
+
+This relational structure allows information from different entities to be combined and analyzed using SQL.
 
 ---
 
-# 📂 Project Structure
+# 🏗️ Database Architecture
+
+The database follows a relational design where individual business entities are stored in separate tables.
+
+### Entity Overview
 
 ```text
-zomato-mysql-data-analytics/
-│
-├── zomato_database.sql
-│
-├── schema/
-│   └── zomato_schema.png
-│
-└── README.md
-```
-
-### 📄 Project Files
-
-| File | Description |
-|---|---|
-| [`zomato_database.sql`](./zomato_database.sql) | Complete MySQL database creation, sample data, relationships, and SQL analysis queries |
-| [`zomato_schema.png`](./schema/zomato_schema.png) | Database schema showing tables and relationships |
-| [`README.md`](./README.md) | Complete project documentation |
-
----
-
-# 📝 SQL Database File
-
-The complete SQL script is available in this repository.
-
-<p align="center">
-
-[![View SQL File](https://img.shields.io/badge/📄%20View%20SQL%20File-zomato__database.sql-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](./zomato_database.sql)
-
-</p>
-
-The SQL file contains:
-
-- Database creation
-- Table creation
-- Primary keys
-- Foreign keys
-- Sample data
-- SQL analysis queries
-- Aggregations
-- Joins
-- Subqueries
-- CTEs
-- Window functions
-- Ranking analysis
-
----
-
-# 🖼️ Database Schema
-
-The following schema represents the structure of the Zomato database and shows the relationships between the different tables.
-
-<p align="center">
-  <img src="./schema/zomato_schema.png"
-       alt="Zomato MySQL Database Schema"
-       width="950">
-</p>
-
-### 🔗 Main Database Relationships
-
-```text
-customer
-    │
-    └── order_detail
-            │
-            ├── restaurant
-            │
-            └── zomato_employee
-
-order_detail
-    │
-    ├── payment_table
-    │
-    └── order_food
-            │
-            └── foods
-```
-
-### Main Foreign Key Relationships
-
-```text
-order_detail.customer_id
-        ↓
-customer.customer_id
-```
-
-```text
-order_detail.restaurant_id
-        ↓
-restaurant.restaurant_id
-```
-
-```text
-order_detail.employee_id
-        ↓
-zomato_employee.employee_id
-```
-
-```text
-payment_table.order_id
-        ↓
-order_detail.order_id
-```
-
-```text
-order_food.order_id
-        ↓
-order_detail.order_id
-```
-
-```text
-order_food.food_id
-        ↓
-foods.food_id
+                    ┌──────────────────┐
+                    │     CUSTOMER     │
+                    └────────┬─────────┘
+                             │
+                             │
+                    ┌────────▼─────────┐
+                    │   ORDER_DETAIL   │
+                    └──────┬─┬───┬─────┘
+                           │ │   │
+             ┌─────────────┘ │   └──────────────┐
+             │               │                  │
+             ▼               ▼                  ▼
+       ┌──────────┐   ┌───────────────┐  ┌──────────────┐
+       │RESTAURANT│   │ZOMATO_EMPLOYEE│  │PAYMENT_TABLE │
+       └──────────┘   └───────────────┘  └──────────────┘
+                           │
+                           │
+                    ┌──────▼──────┐
+                    │ ORDER_FOOD  │
+                    └──────┬─────┘
+                           │
+                    ┌──────▼──────┐
+                    │    FOODS     │
+                    └──────────────┘
 ```
 
 ---
@@ -211,593 +187,418 @@ foods.food_id
 
 The database contains **7 tables**.
 
-| No. | Table | Description |
+| # | Table | Purpose |
 |---:|---|---|
-| 1 | `customer` | Stores customer information |
-| 2 | `restaurant` | Stores restaurant information and ratings |
-| 3 | `zomato_employee` | Stores employee information and ratings |
-| 4 | `foods` | Stores food item names and prices |
-| 5 | `order_detail` | Stores order, customer, restaurant, employee, and delivery information |
-| 6 | `payment_table` | Stores payment transaction information |
-| 7 | `order_food` | Stores food items and quantities associated with orders |
+| 01 | `customer` | Stores customer information |
+| 02 | `restaurant` | Stores restaurant information and ratings |
+| 03 | `zomato_employee` | Stores employee information and ratings |
+| 04 | `foods` | Stores food names and prices |
+| 05 | `order_detail` | Stores order, customer, restaurant, employee and delivery information |
+| 06 | `payment_table` | Stores payment transaction information |
+| 07 | `order_food` | Connects orders with food items and quantities |
 
 ---
 
-# 📊 SQL Analysis Questions
+# 🖼️ Database Schema
 
-The project contains **15 SQL analysis questions**.
+The following Entity Relationship Diagram represents the database structure and relationships between the tables.
 
-Each question demonstrates a practical SQL technique used for data analysis.
+<p align="center">
+  <img
+    src="./schema/zomato_schema.png"
+    alt="Zomato MySQL Database Schema"
+    width="950"
+  >
+</p>
+
+<p align="center">
+  <a href="./schema/zomato_schema.png">
+    🔍 View Full-Size Schema
+  </a>
+</p>
 
 ---
 
-## 1️⃣ Top 3 Customers by Number of Orders
+# 🔗 Table Relationships
 
-**Question:**  
-Find the top 3 customers who have placed the highest number of orders.
+The database connects its major entities through foreign-key relationships.
 
-**Explanation:**  
-Identifies the three customers with the highest total number of orders.
-
-**Concepts Used:**
+### Customer → Order
 
 ```text
-COUNT()
-GROUP BY
-ORDER BY
-LIMIT
+customer.customer_id
+        │
+        ▼
+order_detail.customer_id
 ```
+
+Connects customers with their orders.
 
 ---
 
-## 2️⃣ Restaurant with the Highest Average Rating
-
-**Question:**  
-Find the restaurant with the highest average rating.
-
-**Explanation:**  
-Identifies the restaurant having the highest restaurant rating.
-
-**Concepts Used:**
+### Restaurant → Order
 
 ```text
-MAX()
-Subquery
-WHERE
-ORDER BY
-LIMIT
+restaurant.restaurant_id
+        │
+        ▼
+order_detail.restaurant_id
 ```
+
+Connects restaurants with their associated orders.
 
 ---
 
-## 3️⃣ Orders Delivered in Under 30 Minutes
-
-**Question:**  
-Find orders that were delivered in less than 30 minutes.
-
-**Explanation:**  
-Calculates the time difference between order time and delivery time.
-
-**Concepts Used:**
+### Employee → Order
 
 ```text
-TIMESTAMPDIFF()
-WHERE
+zomato_employee.employee_id
+        │
+        ▼
+order_detail.employee_id
 ```
+
+Connects employees with order delivery records.
 
 ---
 
-## 4️⃣ Total Revenue by Food Item
+### Order → Payment
 
-**Question:**  
-Calculate the total revenue generated by each food item.
+```text
+order_detail.order_id
+        │
+        ▼
+payment_table.order_id
+```
 
-**Explanation:**  
-Calculates revenue using quantity multiplied by price per unit.
+Connects payment transactions with orders.
 
-**Formula:**
+---
+
+### Order → Food
+
+```text
+order_detail.order_id
+        │
+        ▼
+order_food.order_id
+```
+
+Connects orders with ordered food items.
+
+---
+
+### Food → Order Food
+
+```text
+foods.food_id
+        │
+        ▼
+order_food.food_id
+```
+
+Connects food items with order records.
+
+---
+
+# 📈 Business Questions & Analysis
+
+The SQL project contains **15 analytical questions**.
+
+The questions cover customer behavior, restaurant performance, food analysis, order activity, delivery performance, employee ratings, and payments.
+
+| # | Analysis | Purpose |
+|---:|---|---|
+| 01 | 🥇 Top 3 Customers by Orders | Identifies customers with the highest number of orders |
+| 02 | ⭐ Highest Rated Restaurant | Finds the restaurant with the highest rating |
+| 03 | 🚴 Orders Under 30 Minutes | Identifies orders delivered in less than 30 minutes |
+| 04 | 💰 Revenue by Food Item | Calculates revenue generated by each food item |
+| 05 | 🥈 Second Highest Revenue Restaurant | Identifies the second-highest revenue restaurant |
+| 06 | 🍕 Top 5 Popular Food Items | Finds food items with the highest quantity sold |
+| 07 | 👨‍💼 Top 3 Employees by Rating | Identifies the highest-rated employees |
+| 08 | 📅 Highest Order Month | Finds the month with the highest order activity |
+| 09 | 💵 Average Order Amount | Calculates average order value per customer |
+| 10 | 👤 Frequent Customer by Restaurant | Identifies frequent customers for each restaurant |
+| 11 | 🗓️ Weekend Orders | Calculates the number of weekend orders |
+| 12 | ⏱️ Weekday vs Weekend Delivery | Compares average delivery time by day type |
+| 13 | 💎 Most Expensive Food Items | Identifies the highest-priced food items |
+| 14 | 🍴 Restaurant Menu Diversity | Finds restaurants with the most distinct food items |
+| 15 | 💳 Payment Type Analysis | Calculates payment amounts by payment type |
+
+---
+
+## 🔍 Analysis Details
+
+<details>
+<summary><strong>01 — Top 3 Customers by Orders</strong></summary>
+
+**Question:** Find the top 3 customers who placed the highest number of orders.
+
+**Purpose:** Analyze customer ordering frequency.
+
+**SQL Concepts:**
+
+`COUNT()` • `GROUP BY` • `ORDER BY` • `LIMIT`
+
+</details>
+
+<details>
+<summary><strong>02 — Highest Rated Restaurant</strong></summary>
+
+**Question:** Find the restaurant with the highest rating.
+
+**Purpose:** Identify the restaurant with the highest stored rating.
+
+**SQL Concepts:**
+
+`MAX()` • `Subquery` • `WHERE` • `ORDER BY` • `LIMIT`
+
+</details>
+
+<details>
+<summary><strong>03 — Orders Delivered Under 30 Minutes</strong></summary>
+
+**Question:** Find orders delivered in less than 30 minutes.
+
+**Purpose:** Analyze fast delivery records.
+
+**SQL Concepts:**
+
+`TIMESTAMPDIFF()` • `WHERE`
+
+</details>
+
+<details>
+<summary><strong>04 — Revenue by Food Item</strong></summary>
+
+**Question:** Calculate total revenue generated by each food item.
+
+**Calculation:**
 
 ```text
 Revenue = Quantity × Price Per Unit
 ```
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-JOIN
-SUM()
-GROUP BY
-ORDER BY
-```
+`JOIN` • `SUM()` • `GROUP BY` • `ORDER BY`
 
----
+</details>
 
-## 5️⃣ Second Highest Revenue-Generating Restaurant
+<details>
+<summary><strong>05 — Second Highest Revenue Restaurant</strong></summary>
 
-**Question:**  
-Find the restaurant with the second-highest revenue.
+**Question:** Find the restaurant with the second-highest revenue.
 
-**Explanation:**  
-Calculates restaurant revenue and identifies the second-highest result.
+**Purpose:** Rank restaurants using calculated order value.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-JOIN
-SUM()
-GROUP BY
-ORDER BY
-LIMIT
-OFFSET
-```
+`JOIN` • `SUM()` • `GROUP BY` • `ORDER BY` • `LIMIT` • `OFFSET`
 
----
+</details>
 
-## 6️⃣ Top 5 Most Popular Food Items
+<details>
+<summary><strong>06 — Top 5 Popular Food Items</strong></summary>
 
-**Question:**  
-Find the five most popular food items based on quantity sold.
+**Question:** Find the five food items with the highest quantity sold.
 
-**Explanation:**  
-Identifies the food items with the highest total quantity sold.
+**Purpose:** Analyze food-item demand.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-JOIN
-SUM()
-GROUP BY
-ORDER BY
-LIMIT
-```
+`JOIN` • `SUM()` • `GROUP BY` • `ORDER BY` • `LIMIT`
 
----
+</details>
 
-## 7️⃣ Top 3 Zomato Employees by Rating
+<details>
+<summary><strong>07 — Top 3 Employees by Rating</strong></summary>
 
-**Question:**  
-Find the top 3 employees based on their average rating.
+**Question:** Find the top 3 employees according to their rating.
 
-**Explanation:**  
-Ranks employees according to their stored average rating.
+**Purpose:** Analyze employee rating information.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-ORDER BY
-LIMIT
-```
+`ORDER BY` • `LIMIT`
 
----
+</details>
 
-## 8️⃣ Month with the Highest Number of Orders
+<details>
+<summary><strong>08 — Month with Highest Orders</strong></summary>
 
-**Question:**  
-Find the month with the highest number of orders.
+**Question:** Find the month with the highest number of orders.
 
-**Explanation:**  
-Groups orders by month and identifies the month with the highest order count.
+**Purpose:** Analyze monthly order activity.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-MONTHNAME()
-COUNT()
-GROUP BY
-ORDER BY
-LIMIT
-```
+`MONTHNAME()` • `COUNT()` • `GROUP BY` • `ORDER BY` • `LIMIT`
 
----
+</details>
 
-## 9️⃣ Average Order Amount per Customer
+<details>
+<summary><strong>09 — Average Order Amount per Customer</strong></summary>
 
-**Question:**  
-Calculate the average order amount for each customer.
+**Question:** Calculate the average order amount for each customer.
 
-**Explanation:**  
-Calculates the order value and then finds the average order amount for each customer.
-
-**Formula:**
+**Calculation:**
 
 ```text
 Order Amount = Quantity × Price Per Unit
 ```
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-JOIN
-Subquery
-SUM()
-AVG()
-ROUND()
-GROUP BY
-ORDER BY
-```
+`JOIN` • `Subquery` • `SUM()` • `AVG()` • `ROUND()` • `GROUP BY`
 
----
+</details>
 
-## 🔟 Most Frequent Customer for Each Restaurant
+<details>
+<summary><strong>10 — Most Frequent Customer for Each Restaurant</strong></summary>
 
-**Question:**  
-Find the most frequent customer for each restaurant.
+**Question:** Find the most frequent customer for each restaurant.
 
-**Explanation:**  
-Counts customer orders within each restaurant and ranks the customers.
+**Purpose:** Analyze customer-restaurant relationships.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-JOIN
-GROUP BY
-RANK()
-OVER()
-PARTITION BY
-```
+`JOIN` • `GROUP BY` • `RANK()` • `OVER()` • `PARTITION BY`
 
----
+</details>
 
-## 1️⃣1️⃣ Total Orders Placed on Weekends
+<details>
+<summary><strong>11 — Weekend Order Count</strong></summary>
 
-**Question:**  
-Find the total number of orders placed during weekends.
+**Question:** Calculate the total number of weekend orders.
 
-**Explanation:**  
-Counts orders placed on Saturday and Sunday.
+**Purpose:** Analyze order activity on weekends.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-CTE
-DAYNAME()
-DAYOFWEEK()
-WEEKDAY()
-COUNT()
-WHERE
-```
+`CTE` • `DAYNAME()` • `DAYOFWEEK()` • `WEEKDAY()` • `COUNT()`
 
----
+</details>
 
-## 1️⃣2️⃣ Average Delivery Time: Weekdays vs Weekends
+<details>
+<summary><strong>12 — Weekday vs Weekend Delivery Time</strong></summary>
 
-**Question:**  
-Compare average delivery time between weekdays and weekends.
+**Question:** Compare average delivery time between weekdays and weekends.
 
-**Explanation:**  
-Classifies orders into weekdays and weekends and calculates their average delivery time.
+**Purpose:** Analyze delivery duration by day type.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-CASE
-WHEN
-TIMESTAMPDIFF()
-AVG()
-GROUP BY
-```
+`CASE` • `WHEN` • `TIMESTAMPDIFF()` • `AVG()` • `GROUP BY`
 
----
+</details>
 
-## 1️⃣3️⃣ Top 5 Most Expensive Food Items
+<details>
+<summary><strong>13 — Top 5 Most Expensive Food Items</strong></summary>
 
-**Question:**  
-Find the five most expensive food items.
+**Question:** Find the five food items with the highest prices.
 
-**Explanation:**  
-Sorts food items by price and returns the five highest-priced items.
+**Purpose:** Analyze food pricing.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-ORDER BY
-LIMIT
-DENSE_RANK()
-```
+`ORDER BY` • `LIMIT` • `DENSE_RANK()`
 
----
+</details>
 
-## 1️⃣4️⃣ Restaurant with the Most Diverse Menu
+<details>
+<summary><strong>14 — Restaurant with Most Diverse Menu</strong></summary>
 
-**Question:**  
-Find the restaurant with the highest number of distinct food items.
+**Question:** Find the restaurant with the highest number of distinct food items.
 
-**Explanation:**  
-Counts unique food items associated with each restaurant.
+**Purpose:** Compare restaurants based on distinct food items represented in the order data.
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-COUNT(DISTINCT)
-JOIN
-GROUP BY
-ORDER BY
-Subquery
-MAX()
-HAVING
-```
+`COUNT(DISTINCT)` • `JOIN` • `GROUP BY` • `Subquery` • `MAX()` • `HAVING`
 
----
+</details>
 
-## 1️⃣5️⃣ Payment Amount by Payment Type
+<details>
+<summary><strong>15 — Payment Amount by Payment Type</strong></summary>
 
-**Question:**  
-Calculate the total payment amount for each payment type.
+**Question:** Calculate total payment amount for each payment type.
 
-**Explanation:**  
-Calculates the value of ordered food items and groups the result by payment type.
-
-**Formula:**
+**Calculation:**
 
 ```text
 Payment Amount = Quantity × Price Per Unit
 ```
 
-**Concepts Used:**
+**SQL Concepts:**
 
-```text
-JOIN
-SUM()
-GROUP BY
-```
+`JOIN` • `SUM()` • `GROUP BY`
+
+</details>
 
 ---
 
 # 🧠 SQL Concepts Used
 
-This project demonstrates important SQL concepts used in real-world data analysis.
+The project demonstrates both **fundamental and advanced SQL techniques**.
 
-## 🏗️ DDL — Data Definition Language
+### 🟢 Database Fundamentals
 
-```sql
-DROP SCHEMA
+```text
 CREATE SCHEMA
-USE
 CREATE TABLE
 DROP TABLE
-```
-
-Used for creating and managing the database structure.
-
----
-
-## 📝 DML — Data Manipulation Language
-
-```sql
+USE
 INSERT INTO
 ```
 
-Used to insert records into the database tables.
+Used to create and populate the relational database.
 
 ---
 
-## 🔗 SQL JOINs
+### 🔵 Data Retrieval & Filtering
 
-Used to combine data from multiple related tables.
-
-```sql
-JOIN
-```
-
----
-
-## 📊 Aggregate Functions
-
-```sql
-COUNT()
-SUM()
-AVG()
-MAX()
-```
-
-Used to calculate analytical metrics.
-
----
-
-## 📋 GROUP BY
-
-Used to group records for analysis.
-
-```sql
-GROUP BY
-```
-
----
-
-## 🔍 Filtering
-
-```sql
+```text
+SELECT
 WHERE
 HAVING
-```
-
-Used to filter individual records and grouped results.
-
----
-
-## ↕️ Sorting
-
-```sql
+DISTINCT
 ORDER BY
-```
-
-Used to sort analytical results.
-
----
-
-## 🔢 LIMIT & OFFSET
-
-Used to return a specific number of records.
-
-```sql
 LIMIT
 OFFSET
 ```
 
----
-
-## 🧩 Subqueries
-
-Subqueries are used when the result of one query is required by another query.
+Used to retrieve, filter and organize analytical results.
 
 ---
 
-## 🧱 Common Table Expressions
-
-The project uses:
-
-```sql
-WITH
-```
-
-to create Common Table Expressions.
-
----
-
-## 🏆 Window Functions
-
-The project uses:
-
-```sql
-RANK() OVER(...)
-```
-
-and:
-
-```sql
-DENSE_RANK() OVER(...)
-```
-
-for ranking analysis.
-
----
-
-## 📌 PARTITION BY
-
-Used with window functions to perform ranking within separate groups.
-
----
-
-## 🔀 CASE Expression
-
-Used to classify orders into categories such as:
+### 🟣 Data Aggregation
 
 ```text
-Weekday
-Weekend
-```
-
----
-
-## 📅 Date & Time Functions
-
-The project uses functions such as:
-
-```sql
-TIMESTAMPDIFF()
-MONTHNAME()
-DAYNAME()
-DAYOFWEEK()
-WEEKDAY()
-```
-
----
-
-## 🎯 DISTINCT
-
-Used to identify unique food items during menu analysis.
-
----
-
-## ➗ Arithmetic Calculations
-
-The project calculates revenue and order amounts using:
-
-```text
-Quantity × Price Per Unit
-```
-
----
-
-# 🛠️ Tools & Technologies
-
-| Tool / Technology | Purpose |
-|---|---|
-| 🐬 **MySQL** | Database creation and management |
-| 📝 **SQL** | Data querying and analysis |
-| 💻 **MySQL Workbench** | SQL development and execution |
-| 🗄️ **Relational Database** | Structured data storage |
-| 🔗 **Primary & Foreign Keys** | Table relationships |
-| 📊 **SQL Analytics** | Data analysis |
-
----
-
-# 🔄 Project Workflow
-
-The project follows a structured SQL data analysis workflow:
-
-```text
-Database Creation
-        ↓
-Table Creation
-        ↓
-Primary & Foreign Keys
-        ↓
-Insert Sample Data
-        ↓
-Explore Database
-        ↓
-JOIN Related Tables
-        ↓
-Aggregate Data
-        ↓
-Filter & Group Data
-        ↓
-Apply Advanced SQL
-        ↓
-Analyze Results
-```
-
-### 1️⃣ Database Creation
-
-Create the `zomatodb` database/schema.
-
-### 2️⃣ Table Creation
-
-Create the seven required tables.
-
-### 3️⃣ Define Relationships
-
-Use Primary Keys and Foreign Keys to connect related tables.
-
-### 4️⃣ Insert Data
-
-Insert sample customers, restaurants, employees, food items, orders, and payment records.
-
-### 5️⃣ Explore the Data
-
-Inspect tables and understand their columns and relationships.
-
-### 6️⃣ Write SQL Queries
-
-Develop queries to answer analytical questions.
-
-### 7️⃣ Perform Data Analysis
-
-Use:
-
-```text
-JOINs
+COUNT()
+SUM()
+AVG()
+MAX()
 GROUP BY
-Aggregate Functions
-WHERE
-HAVING
-ORDER BY
 ```
 
-### 8️⃣ Apply Advanced SQL
+Used to calculate metrics and summarize data.
 
-Use:
+---
+
+### 🟠 Table Relationships
+
+```text
+JOIN
+Primary Keys
+Foreign Keys
+```
+
+Used to combine information stored across multiple tables.
+
+---
+
+### 🔴 Advanced SQL
 
 ```text
 Subqueries
@@ -805,62 +606,88 @@ CTEs
 CASE
 RANK()
 DENSE_RANK()
+OVER()
 PARTITION BY
 ```
 
-### 9️⃣ Analyze Results
-
-Use query results to understand customers, restaurants, food items, orders, delivery times, employees, and payments.
+Used for complex analysis, classification and ranking.
 
 ---
 
-# 📥 How to Download the Project
-
-## Option 1 — Download ZIP
-
-1. Open the GitHub repository.
-2. Click the **Code** button.
-3. Select **Download ZIP**.
-4. Extract the ZIP file.
-5. Open:
+### 🟡 Date & Time Analysis
 
 ```text
-zomato-mysql-data-analytics/
+TIMESTAMPDIFF()
+MONTHNAME()
+DAYNAME()
+DAYOFWEEK()
+WEEKDAY()
 ```
 
-6. The SQL file is:
+Used for order and delivery-time analysis.
+
+---
+
+# 🛠️ Tools & Technologies
+
+| Technology | Purpose |
+|---|---|
+| 🐬 **MySQL** | Relational database management |
+| 📝 **SQL** | Database querying and analytics |
+| 🖥️ **MySQL Workbench** | SQL development and execution |
+| 🗄️ **Relational Database** | Structured data organization |
+| 🔗 **Primary & Foreign Keys** | Establishing table relationships |
+
+---
+
+# 🔄 Project Workflow
+
+The project follows a structured data-analysis workflow:
 
 ```text
-zomato_database.sql
-```
-
-7. The schema image is:
-
-```text
-schema/zomato_schema.png
+        ┌──────────────────────┐
+        │   Database Creation  │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │    Table Creation    │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │ Keys & Relationships │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │     Insert Data      │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │   Explore Database   │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │      JOIN Tables     │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │ Aggregate & Filter   │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │   Advanced SQL       │
+        │ CTE • CASE • Ranking │
+        └──────────┬───────────┘
+                   ↓
+        ┌──────────────────────┐
+        │   Analyze Results    │
+        └──────────────────────┘
 ```
 
 ---
 
-## Option 2 — Clone the Repository
+# ▶️ How to Run the Project
 
-If Git is installed, run:
-
-```bash
-git clone https://github.com/YogirajSharma/Data-Analytics-Portfolio.git
-```
-
-Then navigate to:
-
-```text
-Data-Analytics-Portfolio/MySQL/zomato-mysql-data-analytics/
-```
-
----
-
-# ▶️ How to Run the SQL Project
-
-## Step 1 — Install MySQL
+## 1. Install MySQL
 
 Install:
 
@@ -871,47 +698,53 @@ Make sure the MySQL Server is running.
 
 ---
 
-## Step 2 — Open MySQL Workbench
+## 2. Download the SQL Project
 
-Open **MySQL Workbench** and connect to your MySQL server.
+Clone or download the portfolio repository and navigate to:
 
----
+```text
+MySQL/zomato-mysql-data-analytics/
+```
 
-## Step 3 — Open the SQL File
-
-Open:
+The SQL script is:
 
 ```text
 zomato_database.sql
 ```
 
-In MySQL Workbench:
+---
 
-```text
-File → Open SQL Script
-```
+## 3. Open MySQL Workbench
 
-Select the SQL file.
+Launch **MySQL Workbench** and connect to your MySQL Server.
 
 ---
 
-## Step 4 — Execute the SQL Script
+## 4. Open the SQL Script
+
+From MySQL Workbench:
+
+```text
+File
+   ↓
+Open SQL Script
+   ↓
+zomato_database.sql
+```
+
+---
+
+## 5. Execute the Script
 
 Click the **Execute** button in MySQL Workbench.
 
-The script will:
-
-1. Create the `zomatodb` schema.
-2. Create the required tables.
-3. Define keys and relationships.
-4. Insert sample data.
-5. Execute the SQL analysis queries.
+The script will create the database, tables, relationships, data and analysis queries contained in the SQL file.
 
 ---
 
-## Step 5 — Refresh the Schema
+## 6. Refresh the Schema
 
-Refresh the **Schemas** panel in MySQL Workbench.
+Refresh the **Schemas** panel.
 
 You should see:
 
@@ -929,63 +762,75 @@ zomatodb
 
 ---
 
-## Step 6 — Run Individual Queries
+## 7. Run the Analysis Queries
 
-You can execute each analysis question separately.
+The SQL file contains 15 analysis questions.
 
-For learning:
+You can execute the queries individually to understand:
 
 ```text
-Read Question
-      ↓
-Identify Tables
-      ↓
-Understand Relationships
-      ↓
-Understand Query
-      ↓
-Execute Query
-      ↓
-Check Result
+Customer Analysis
+Restaurant Analysis
+Food Analysis
+Order Analysis
+Delivery Analysis
+Employee Analysis
+Payment Analysis
 ```
 
 ---
 
-# ⚠️ Important Before Running
+# 📥 How to Download
 
-The SQL file contains:
+## Option 1 — Download ZIP
 
-```sql
-DROP SCHEMA IF EXISTS zomatodb;
+1. Open the GitHub repository.
+2. Click **Code**.
+3. Select **Download ZIP**.
+4. Extract the downloaded ZIP file.
+5. Open:
+
+```text
+Data-Analytics-Portfolio/
+└── MySQL/
+    └── zomato-mysql-data-analytics/
 ```
 
-This means an existing `zomatodb` schema will be deleted before the project schema is recreated.
+---
 
-> ⚠️ **Do not run the complete SQL script if you have important data inside an existing `zomatodb` schema.**
+## Option 2 — Clone Using Git
+
+Run:
+
+```bash
+git clone https://github.com/YogirajSharma/Data-Analytics-Portfolio.git
+```
+
+Then navigate to:
+
+```text
+Data-Analytics-Portfolio/MySQL/zomato-mysql-data-analytics/
+```
 
 ---
 
 # 🎓 Key Learning Areas
 
-This project provides practical experience in:
+This project provides practical experience in the following areas:
 
 ### 🗄️ Relational Database Design
 
-Understanding how multiple tables can represent a real-world food delivery system.
+Understanding how real-world entities can be organized into related tables.
 
-### 🔑 Primary Keys
+### 🔑 Keys & Relationships
 
-Understanding how unique identifiers are used to identify records.
+Understanding the role of Primary Keys and Foreign Keys.
 
-### 🔗 Foreign Keys
+### 🔗 SQL JOINs
 
-Understanding how related tables are connected.
+Combining data from multiple relational tables.
 
-### 🔄 SQL JOINs
-
-Combining information from multiple tables.
-
-### 📊 Aggregate Functions
+### 📊 Aggregation
 
 Using:
 
@@ -996,35 +841,28 @@ AVG()
 MAX()
 ```
 
-for data analysis.
+to calculate analytical metrics.
 
-### 📋 GROUP BY
+### 🧩 Subqueries & CTEs
 
-Grouping data for analytical calculations.
-
-### 🔍 WHERE & HAVING
-
-Filtering records and aggregated results.
-
-### 🧩 Subqueries
-
-Using queries inside other queries.
-
-### 🧱 CTEs
-
-Using `WITH` to simplify complex queries.
+Breaking down complex SQL analysis into manageable queries.
 
 ### 🏆 Window Functions
 
-Using `RANK()` and `DENSE_RANK()` for ranking.
+Using ranking functions such as:
+
+```sql
+RANK()
+DENSE_RANK()
+```
 
 ### 📌 PARTITION BY
 
-Performing ranking within groups.
+Performing ranking and calculations within groups.
 
-### 🔀 CASE
+### 🔀 CASE Expressions
 
-Classifying records based on conditions.
+Creating conditional categories such as weekday and weekend.
 
 ### 📅 Date & Time Analysis
 
@@ -1032,137 +870,196 @@ Analyzing order and delivery timestamps.
 
 ### 💰 Revenue Analysis
 
-Calculating revenue using quantity and price.
+Calculating order and food-level values.
 
-### 🍕 Food Analysis
+### 👤 Customer Analytics
 
-Analyzing food prices and popularity.
+Understanding customer order frequency and average order value.
 
-### 🍴 Restaurant Analysis
+### 🍴 Restaurant Analytics
 
-Analyzing restaurant ratings, revenue, and menu diversity.
+Analyzing restaurant ratings, revenue and menu diversity.
 
-### 👤 Customer Analysis
+### 🍕 Food Analytics
 
-Analyzing customer orders and ordering frequency.
+Analyzing food popularity, pricing and quantity sold.
+
+### 💳 Payment Analytics
+
+Analyzing calculated payment amounts by payment type.
 
 ---
 
 # 💼 Skills Demonstrated
 
-- 🐬 MySQL
-- 📝 SQL
-- 🗄️ Relational Database Design
-- 🔑 Primary Keys
-- 🔗 Foreign Keys
-- 🔗 SQL JOINs
-- 📊 Aggregate Functions
-- 📋 GROUP BY
-- 🔍 WHERE & HAVING
-- ↕️ ORDER BY
-- 🧩 Subqueries
-- 🧱 CTEs
-- 🏆 Window Functions
-- 📌 PARTITION BY
-- 🔀 CASE Expressions
-- 📅 Date & Time Functions
-- 📈 Ranking Analysis
-- 🍕 Food Analysis
-- 🍴 Restaurant Analysis
-- 👤 Customer Analysis
-- 📦 Order Analysis
-- 💳 Payment Analysis
+<p align="center">
+
+<img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=flat-square&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/SQL-Analytics-CC2927?style=flat-square&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/Database-Design-2E8B57?style=flat-square">
+<img src="https://img.shields.io/badge/SQL-JOINs-6A5ACD?style=flat-square">
+<img src="https://img.shields.io/badge/SQL-CTEs-FF8C00?style=flat-square">
+<img src="https://img.shields.io/badge/SQL-Window%20Functions-8B4513?style=flat-square">
+
+</p>
+
+### Technical Skills
+
+- MySQL
+- SQL
+- Relational Database Design
+- Database Schema Design
+- Primary Keys
+- Foreign Keys
+- SQL JOINs
+- Aggregate Functions
+- GROUP BY
+- WHERE & HAVING
+- ORDER BY
+- Subqueries
+- Common Table Expressions
+- CASE Expressions
+- Window Functions
+- RANK & DENSE_RANK
+- PARTITION BY
+- Date & Time Functions
+- Customer Analytics
+- Restaurant Analytics
+- Food Analytics
+- Order Analytics
+- Payment Analytics
 
 ---
 
-# 🔗 Quick Project Links
+# 📂 Project Structure
 
-### 📄 SQL Database & Analysis
+```text
+zomato-mysql-data-analytics/
+│
+├── 📄 zomato_database.sql
+│
+├── 📁 schema/
+│   └── 🖼️ zomato_schema.png
+│
+└── 📄 README.md
+```
 
-[![View SQL File](https://img.shields.io/badge/📄%20View%20SQL%20File-4479A1?style=for-the-badge&logo=mysql&logoColor=white)](./zomato_database.sql)
+### File Details
 
-### 🖼️ Database Schema
-
-[View Database Schema](./schema/zomato_schema.png)
-
----
-
-# 📊 Project Summary
-
-| Category | Details |
+| File | Description |
 |---|---|
-| Project Type | MySQL Data Analytics |
-| Database | `zomatodb` |
-| Tables | 7 |
-| Analysis Questions | 15 |
-| DBMS | MySQL |
-| Query Language | SQL |
-| Schema | Included |
-| Sample Data | Included in SQL file |
-| Advanced SQL | CTEs, Subqueries, CASE & Window Functions |
+| `zomato_database.sql` | Complete MySQL database, sample data and SQL analysis |
+| `schema/zomato_schema.png` | Database schema and table relationships |
+| `README.md` | Project documentation |
+
+---
+
+# 🔗 Quick Links
+
+<p align="center">
+
+<a href="./zomato_database.sql">
+<img src="https://img.shields.io/badge/📄%20SQL%20Script-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL Script">
+</a>
+
+<a href="./schema/zomato_schema.png">
+<img src="https://img.shields.io/badge/🗺️%20Database%20Schema-2E8B57?style=for-the-badge" alt="Database Schema">
+</a>
+
+</p>
+
+---
+
+# ⚠️ Important Note
+
+The SQL script contains:
+
+```sql
+DROP SCHEMA IF EXISTS zomatodb;
+```
+
+Therefore, if a schema named `zomatodb` already exists, it will be dropped before the project database is recreated.
+
+> **⚠️ Important:** Do not run the complete script against an existing `zomatodb` schema containing important data.
+
+For a learning or portfolio environment, this allows the project database to be recreated from scratch.
 
 ---
 
 # 🏁 Conclusion
 
-The **Zomato MySQL Data Analytics Project** demonstrates how a relational database can be created, populated, connected, and analyzed using MySQL and SQL.
+The **Zomato MySQL Data Analytics Project** demonstrates how SQL can be used to design, manage and analyze a relational database.
 
-The project contains seven related tables covering:
-
-- Customers
-- Restaurants
-- Employees
-- Food Items
-- Orders
-- Payments
-- Ordered Food Items
-
-The 15 SQL analysis questions provide practical experience in analyzing:
-
-- Customer orders
-- Restaurant ratings
-- Delivery times
-- Food revenue
-- Popular food items
-- Employee ratings
-- Monthly orders
-- Average customer order amounts
-- Restaurant customer frequency
-- Weekend orders
-- Weekday vs weekend delivery time
-- Food prices
-- Restaurant menu diversity
-- Payment types
-
-The project also demonstrates important SQL concepts including **JOINs, aggregate functions, subqueries, CTEs, CASE expressions, date/time functions, RANK(), DENSE_RANK(), GROUP BY, HAVING, and PARTITION BY**.
-
-Overall, this project provides a practical foundation for developing skills in **MySQL, SQL Data Analytics, Relational Database Management, and Business-oriented Data Analysis**.
-
----
-
-# ⭐ Project Highlights
+The project covers multiple business entities including:
 
 ```text
-Database       → zomatodb
-Tables         → 7
-SQL Questions  → 15
-DBMS           → MySQL
-Language       → SQL
-Schema         → Included
-Analysis       → Customer, Food, Restaurant, Order & Payment
-Advanced SQL   → CTE, Subqueries, CASE, RANK & DENSE_RANK
+Customers
+Restaurants
+Employees
+Food Items
+Orders
+Payments
 ```
+
+Through **15 analytical questions**, the project applies SQL to explore customer ordering behavior, restaurant performance, food demand, delivery times, employee ratings, order trends and payment analysis.
+
+The project also demonstrates a range of SQL techniques, from fundamental concepts such as:
+
+```text
+SELECT
+WHERE
+GROUP BY
+ORDER BY
+JOIN
+COUNT()
+SUM()
+AVG()
+```
+
+to advanced concepts such as:
+
+```text
+Subqueries
+CTEs
+CASE
+RANK()
+DENSE_RANK()
+OVER()
+PARTITION BY
+```
+
+Overall, this project provides practical experience in **MySQL, SQL Data Analytics, relational database design and business-oriented data analysis**.
+
+---
+
+# 📌 Project Summary
+
+| Metric | Value |
+|---|---:|
+| 🗄️ Database | `zomatodb` |
+| 📋 Tables | **7** |
+| 📊 Analysis Questions | **15** |
+| 🐬 DBMS | **MySQL** |
+| 📝 Query Language | **SQL** |
+| 🖼️ Schema | **Included** |
+| 🧠 Advanced SQL | **CTE • Subquery • CASE • Window Functions** |
 
 ---
 
 <p align="center">
 
-### 🍔 Zomato MySQL Data Analytics Project
+<strong>🍔 Zomato MySQL Data Analytics</strong>
 
-<strong>Built with MySQL & SQL</strong>
+<br>
 
-</p>
+<sub>
+MySQL • SQL • Database Design • Data Analytics
+</sub>
 
-<p align="center">
-  ⭐ If you find this project useful, consider giving the repository a star!
+<br><br>
+
+<a href="https://github.com/YogirajSharma/Data-Analytics-Portfolio">
+<img src="https://img.shields.io/badge/🔗%20Data%20Analytics%20Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Data Analytics Portfolio">
+</a>
+
 </p>
