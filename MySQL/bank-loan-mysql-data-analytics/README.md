@@ -1,719 +1,1127 @@
-# 🏦 Bank Loan Data Analysis – MySQL
+# 🏦 Bank Loan MySQL Data Analytics
 
 <p align="center">
-
   <img src="https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL">
-
-  <img src="https://img.shields.io/badge/SQL-Analysis-336791?style=for-the-badge&logo=sql&logoColor=white" alt="SQL">
-
-  <img src="https://img.shields.io/badge/Data%20Analytics-Project-2E7D32?style=for-the-badge" alt="Data Analytics">
-
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Project Status">
-
+  <img src="https://img.shields.io/badge/SQL-Data%20Analytics-CC2927?style=for-the-badge&logo=mysql&logoColor=white" alt="SQL">
+  <img src="https://img.shields.io/badge/Database%20Analysis-2E8B57?style=for-the-badge" alt="Database Analysis">
+  <img src="https://img.shields.io/badge/Data%20Analytics-6A5ACD?style=for-the-badge" alt="Data Analytics">
 </p>
 
 <p align="center">
-  <b>A SQL-based Bank Loan Data Analysis Project using MySQL</b>
+  <strong>MySQL Database • SQL Analytics • Loan Portfolio Analysis</strong>
+</p>
+
+<p align="center">
+  A practical MySQL project focused on analyzing loan applications,
+  funded amounts, payments, loan status, interest rates, customer attributes,
+  and month-over-month loan performance.
+</p>
+
+<p align="center">
+  <a href="./bank_loan_database.sql">📄 View Database SQL</a>
+  &nbsp;&nbsp;•&nbsp;&nbsp;
+  <a href="./bank_loan_analysis.sql">📊 View Analysis SQL</a>
 </p>
 
 ---
 
-## 📌 Project Overview
+# 📌 Table of Contents
 
-The **Bank Loan Data Analysis** project is a MySQL-based data analytics project focused on analyzing loan applications, funded amounts, repayments, loan status, borrower information, interest rates, and other loan-related attributes.
-
-The project demonstrates how SQL can be used to transform structured loan data into meaningful analytical information through **KPI analysis, loan quality analysis, loan status analysis, time-based analysis, growth analysis, and interest-rate analysis**.
-
-The project is divided into two SQL files:
-
-- 🗄️ **Database SQL File** – Creates the database and table and loads the loan data.
-- 📊 **Analysis SQL File** – Contains SQL queries used to perform the complete loan analysis.
-
----
-
-## 🎯 Project Objectives
-
-The main objectives of this project are:
-
-- Analyze the overall loan portfolio.
-- Calculate important loan-related KPIs.
-- Compare Month-to-Date (MTD) and Previous Month-to-Date (PMTD) performance.
-- Identify Good Loans and Bad Loans.
-- Analyze loan status and repayment performance.
-- Analyze loan applications across different dimensions.
-- Analyze monthly loan trends.
-- Calculate Month-over-Month loan application growth.
-- Calculate Month-over-Month funded amount growth.
-- Analyze average interest rates by loan grade.
-- Analyze average interest rates by loan sub-grade.
-- Practice SQL concepts using a financial dataset.
-
----
-
-# 📊 Key Performance Indicators
-
-The project calculates several important loan portfolio KPIs.
-
-### 📌 Loan Applications
-
-- Total Loan Applications
-- MTD Loan Applications
-- PMTD Loan Applications
-
-### 💰 Funded Amount
-
-- Total Funded Amount
-- MTD Funded Amount
-- PMTD Funded Amount
-
-### 💵 Amount Received
-
-- Total Amount Received
-- MTD Amount Received
-- PMTD Amount Received
-
-### 📈 Financial Metrics
-
-- Average Interest Rate
-- MTD Average Interest Rate
-- Average Debt-to-Income Ratio (DTI)
-- MTD Average DTI
+- [📖 Project Overview](#-project-overview)
+- [🎯 Project Objective](#-project-objective)
+- [📊 Project Snapshot](#-project-snapshot)
+- [🗄️ Database Overview](#️-database-overview)
+- [🏗️ Database Architecture](#️-database-architecture)
+- [🗃️ Database Table](#️-database-table)
+- [📋 Data Fields](#-data-fields)
+- [📈 Analysis Areas](#-analysis-areas)
+- [🔍 KPI Analysis](#-kpi-analysis)
+- [🟢 Good Loan Analysis](#-good-loan-analysis)
+- [🔴 Bad Loan Analysis](#-bad-loan-analysis)
+- [📊 Loan Status Analysis](#-loan-status-analysis)
+- [📅 Loan Overview Analysis](#-loan-overview-analysis)
+- [📈 Month-over-Month Analysis](#-month-over-month-analysis)
+- [💰 Interest Rate Analysis](#-interest-rate-analysis)
+- [🧠 SQL Concepts Used](#-sql-concepts-used)
+- [🛠️ Tools & Technologies](#️-tools--technologies)
+- [🔄 Project Workflow](#-project-workflow)
+- [▶️ How to Run the Project](#️-how-to-run-the-project)
+- [📥 How to Download](#-how-to-download)
+- [🎓 Key Learning Areas](#-key-learning-areas)
+- [💼 Skills Demonstrated](#-skills-demonstrated)
+- [📂 Project Structure](#-project-structure)
+- [🔗 Quick Links](#-quick-links)
+- [⚠️ Important Note](#️-important-note)
+- [🏁 Conclusion](#-conclusion)
 
 ---
 
-# 🟢 Good Loan Analysis
+# 📖 Project Overview
 
-The project identifies **Good Loans** based on the following loan statuses:
+The **Bank Loan MySQL Data Analytics Project** is a SQL-based data analytics project built using **MySQL**.
 
-- `Fully Paid`
-- `Current`
+The project uses a financial loan dataset stored in a relational database and focuses on analyzing:
 
-The analysis calculates:
+- 💳 Loan Applications
+- 💰 Funded Loan Amount
+- 💵 Amount Received
+- 📊 Loan Status
+- 📈 Interest Rate
+- 📉 Debt-to-Income Ratio
+- 🌎 State-wise Loan Performance
+- 📅 Monthly Loan Activity
+- ⏳ Loan Term
+- 👨‍💼 Employee Length
+- 🎯 Loan Purpose
+- 🏠 Home Ownership
+- 🟢 Good Loans
+- 🔴 Bad Loans
 
-- Good Loan Applications
-- Good Loan Percentage
-- Good Loan Funded Amount
-- Good Loan Amount Received
+The project combines **database creation, SQL querying, aggregation, filtering, date analysis, window functions, and business-oriented analysis**.
 
-This analysis helps examine the portion of the loan portfolio associated with loans having these statuses.
-
----
-
-# 🔴 Bad Loan Analysis
-
-Loans that are neither `Fully Paid` nor `Current` are analyzed as **Bad Loans**.
-
-The analysis includes:
-
-- Bad Loan Applications
-- Bad Loan Percentage
-- Bad Loan Funded Amount
-- Bad Loan Amount Received
-- Charged Off loan analysis
-
-The project uses SQL conditional logic to categorize and analyze these loan records.
+The database script creates the `financial_db` database and the `financial_loan` table containing loan-related attributes such as loan status, loan amount, interest rate, DTI, purpose, grade, state, employment length and total payment.
 
 ---
 
-# 📋 Loan Status Analysis
+# 🎯 Project Objective
 
-The project analyzes the loan portfolio based on individual loan statuses.
+The main objective of this project is to develop practical knowledge of **MySQL, SQL, relational data analysis, and business-oriented loan analytics**.
 
-For each loan status, the analysis calculates:
+### Key Objectives
 
-- Loan Applications
-- Funded Amount
-- Amount Received
-- Average Interest Rate
-- Average DTI
-
-An additional **MTD Loan Status Analysis** is also included.
-
----
-
-# 🗓️ Loan Overview Analysis
-
-The project analyzes loan applications across multiple dimensions.
-
-### 📅 Monthly Analysis
-
-- Loan applications by month
-- Funded amount by month
-- Amount received by month
-
-### 🗺️ State Analysis
-
-- Loan applications by state
-
-### 📄 Term Analysis
-
-- Loan applications by loan term
-
-### 👨‍💼 Employee Length Analysis
-
-- Loan applications by employee length
-
-### 🎯 Purpose Analysis
-
-- Loan applications by loan purpose
-
-### 🏠 Home Ownership Analysis
-
-- Loan applications by home ownership type
+- Create and manage a MySQL database
+- Create a financial loan table
+- Load structured loan data
+- Calculate loan application KPIs
+- Analyze funded loan amounts
+- Analyze total amount received
+- Calculate average interest rates
+- Analyze average DTI
+- Identify Good Loan performance
+- Identify Bad Loan performance
+- Analyze different loan statuses
+- Analyze monthly loan activity
+- Analyze state-wise loan performance
+- Analyze loan terms
+- Analyze employee length
+- Analyze loan purposes
+- Analyze home ownership
+- Calculate month-over-month growth
+- Analyze interest rates by grade and subgrade
+- Apply advanced SQL techniques
 
 ---
 
-# 📈 Month-over-Month Growth Analysis
+# 📊 Project Snapshot
 
-The project uses the SQL window function `LAG()` to compare values across consecutive months.
-
-### Loan Application Growth
-
-Month-over-Month loan application growth is calculated by comparing the current month's applications with the previous month's applications.
-
-### Funded Amount Growth
-
-The project also calculates Month-over-Month growth in the funded loan amount.
-
-This demonstrates the practical use of **window functions for time-series analysis**.
-
----
-
-# 💳 Interest Rate Analysis
-
-The project analyzes average interest rates across different loan classifications.
-
-### Grade-wise Analysis
-
-Average interest rate is calculated for each loan grade.
-
-### Sub-Grade Analysis
-
-Average interest rate is also calculated for each loan sub-grade.
-
-This allows the loan portfolio to be examined at both grade and sub-grade levels.
+| Category | Details |
+|---|---|
+| 🗄️ **Database** | `financial_db` |
+| 🐬 **DBMS** | MySQL |
+| 📝 **Language** | SQL |
+| 🗃️ **Main Table** | `financial_loan` |
+| 📊 **Analysis Type** | Bank Loan Data Analysis |
+| 💰 **Financial Metrics** | Applications, Funded Amount, Amount Received |
+| 📈 **Performance Metrics** | Interest Rate, DTI, MoM Growth |
+| 🟢 **Loan Classification** | Good Loan |
+| 🔴 **Loan Classification** | Bad Loan |
+| 📅 **Time Analysis** | Monthly & MTD/PMTD |
+| 🌎 **Geographical Analysis** | State-wise |
+| 🧠 **Advanced SQL** | Window Functions, Subqueries, Aggregations |
 
 ---
 
-# 🗄️ Database Information
+# 🗄️ Database Overview
 
-The project uses the following MySQL database:
+The project creates a MySQL database named:
 
-```text
+```sql
 financial_db
 ```
 
-The primary table used for analysis is:
+The database initialization contains:
+
+```sql
+DROP DATABASE IF EXISTS financial_db;
+
+CREATE DATABASE financial_db;
+
+USE financial_db;
+```
+
+The main table created in the database is:
 
 ```text
 financial_loan
 ```
 
-The database SQL file creates the database and the `financial_loan` table before loading the loan data.
+The database table contains loan-related information including:
+
+```text
+Loan ID
+State
+Application Type
+Employee Length
+Employee Title
+Grade
+Home Ownership
+Issue Date
+Last Credit Pull Date
+Last Payment Date
+Loan Status
+Next Payment Date
+Member ID
+Purpose
+Sub Grade
+Term
+Verification Status
+Annual Income
+DTI
+Installment
+Interest Rate
+Loan Amount
+Total Accounts
+Total Payment
+```
+
+These fields are defined in the database SQL script.
 
 ---
 
-# 📑 Main Dataset Columns
+# 🏗️ Database Architecture
 
-The `financial_loan` table contains loan-related fields including:
+The project uses a simple relational structure centered around the `financial_loan` table.
 
-| Column | Description |
+```text
+                 ┌─────────────────────────┐
+                 │      financial_db        │
+                 └────────────┬────────────┘
+                              │
+                              ▼
+                 ┌─────────────────────────┐
+                 │    financial_loan       │
+                 └────────────┬────────────┘
+                              │
+          ┌───────────────────┼───────────────────┐
+          │                   │                   │
+          ▼                   ▼                   ▼
+     Loan Details       Financial Metrics    Customer Attributes
+          │                   │                   │
+          ▼                   ▼                   ▼
+      Loan Status         Loan Amount          State
+      Loan Purpose        Total Payment        Employment
+      Loan Term           Interest Rate        Home Ownership
+      Grade               DTI                  Annual Income
+```
+
+The project uses the `id` field as the primary key of the `financial_loan` table.
+
+---
+
+# 🗃️ Database Table
+
+The project contains the following main table:
+
+| Table | Purpose |
 |---|---|
-| `id` | Loan ID |
-| `member_id` | Member ID |
-| `address_state` | Borrower's state |
+| `financial_loan` | Stores loan application, customer, financial and repayment-related information |
+
+The table contains fields for loan identification, applicant attributes, loan characteristics, dates and financial metrics.
+
+---
+
+# 📋 Data Fields
+
+Important fields available in the `financial_loan` table include:
+
+| Field | Description |
+|---|---|
+| `id` | Unique loan identifier |
+| `address_state` | Applicant state |
 | `application_type` | Type of loan application |
 | `emp_length` | Employment length |
 | `emp_title` | Employment title |
 | `grade` | Loan grade |
-| `sub_grade` | Loan sub-grade |
-| `home_ownership` | Home ownership status |
+| `home_ownership` | Home ownership category |
 | `issue_date` | Loan issue date |
-| `last_credit_pull_date` | Last credit pull date |
-| `last_payment_date` | Last payment date |
-| `next_payment_date` | Next payment date |
 | `loan_status` | Current loan status |
-| `purpose` | Loan purpose |
-| `term` | Loan term |
-| `verification_status` | Income verification status |
-| `annual_income` | Annual income |
+| `purpose` | Purpose of the loan |
+| `sub_grade` | Loan sub-grade |
+| `term` | Loan repayment term |
+| `verification_status` | Income/record verification status |
+| `annual_income` | Applicant annual income |
 | `dti` | Debt-to-income ratio |
 | `installment` | Loan installment |
 | `int_rate` | Interest rate |
-| `loan_amount` | Loan amount |
+| `loan_amount` | Funded loan amount |
 | `total_acc` | Total accounts |
 | `total_payment` | Total payment received |
 
----
-
-# 🧰 Tools & Technologies
-
-| Technology | Purpose |
-|---|---|
-| 🐬 **MySQL** | Database creation and management |
-| 💻 **SQL** | Data analysis and querying |
-| 🛠️ **MySQL Workbench** | SQL development and execution |
-| 🐙 **GitHub** | Project documentation and portfolio hosting |
+These columns are defined in the database creation script.
 
 ---
 
-# 💻 SQL Concepts Used
+# 📈 Analysis Areas
 
-This project demonstrates a variety of SQL concepts.
+The SQL analysis file is organized into three major areas:
 
-## 🗄️ Database Operations
+```text
+A. BANK LOAN REPORT | SUMMARY
+│
+├── KPIs
+├── Good Loan Issued
+├── Bad Loan Issued
+└── Loan Status
+
+B. BANK LOAN REPORT | OVERVIEW
+│
+├── Month
+├── State
+├── Term
+├── Employee Length
+├── Purpose
+└── Home Ownership
+
+C. MISCELLANEOUS | OVERVIEW
+│
+├── MoM Loan Application Growth
+├── MoM Loan Amount Disbursed Growth
+├── Interest Rate by Grade
+└── Interest Rate by Subgrade
+```
+
+This organization follows the structure present in the analysis SQL file.
+
+---
+
+# 🔍 KPI Analysis
+
+The project calculates several important loan KPIs.
+
+### Main KPIs
+
+- Total Loan Applications
+- MTD Loan Applications
+- PMTD Loan Applications
+- Total Funded Amount
+- MTD Funded Amount
+- PMTD Funded Amount
+- Total Amount Received
+- MTD Amount Received
+- PMTD Amount Received
+- Average Interest Rate
+- MTD Average Interest Rate
+- PMTD Average Interest Rate
+
+The SQL uses aggregation functions such as `COUNT()`, `SUM()` and `AVG()` along with date-based filtering for MTD and PMTD calculations.
+
+### Example KPI Calculation
 
 ```sql
+SELECT COUNT(id) AS TotalLoanApplications
+FROM financial_loan;
+```
+
+The analysis also calculates total funded amount:
+
+```sql
+SELECT SUM(loan_amount) AS Total_Funded_Amount
+FROM financial_loan;
+```
+
+And total amount received:
+
+```sql
+SELECT SUM(total_payment) AS Total_Amount_Received
+FROM financial_loan;
+```
+
+---
+
+# 🟢 Good Loan Analysis
+
+The project classifies loans with the following statuses as **Good Loans**:
+
+```text
+Fully Paid
+Current
+```
+
+The analysis calculates:
+
+- Good Loan Percentage
+- Good Loan Applications
+- Good Loan Funded Amount
+- Good Loan Amount Received
+
+The classification is explicitly implemented in the SQL using:
+
+```sql
+WHERE loan_status IN ('Fully Paid', 'Current');
+```
+
+
+
+### Good Loan Analysis Structure
+
+```text
+Good Loan
+│
+├── Good Loan Percentage
+├── Good Loan Applications
+├── Good Loan Funded Amount
+└── Good Loan Amount Received
+```
+
+---
+
+# 🔴 Bad Loan Analysis
+
+The analysis also evaluates loans outside the Good Loan categories.
+
+The SQL calculates:
+
+- Bad Loan Percentage
+- Bad Loan Applications
+- Bad Loan Funded Amount
+- Bad Loan Amount Received
+
+The analysis uses `loan_status` conditions to identify loans that are not classified as `Fully Paid` or `Current`.
+
+### Bad Loan Analysis Structure
+
+```text
+Bad Loan
+│
+├── Bad Loan Percentage
+├── Bad Loan Applications
+├── Bad Loan Funded Amount
+└── Bad Loan Amount Received
+```
+
+---
+
+# 📊 Loan Status Analysis
+
+The project provides a complete loan status summary.
+
+For each loan status, the analysis calculates:
+
+- Applications
+- Funded Amount
+- Amount Received
+- Average Interest
+- Average DTI
+
+Example structure:
+
+```sql
+SELECT
+    loan_status,
+    COUNT(*) AS Applications,
+    SUM(loan_amount) AS 'Funded Amount',
+    SUM(total_payment) AS 'Amount Received',
+    ROUND(AVG(int_rate),2) AS 'Avg Interest',
+    ROUND(AVG(dti),2) AS 'Avg DTI'
+FROM financial_loan
+GROUP BY loan_status;
+```
+
+The analysis also includes an MTD loan status summary using the latest month available in the dataset.
+
+---
+
+# 📅 Loan Overview Analysis
+
+The project analyzes loan performance across multiple dimensions.
+
+## Monthly Analysis
+
+The monthly analysis calculates:
+
+- Month Number
+- Month Name
+- Loan Applications
+- Total Funded Amount
+- Total Amount Received
+
+```sql
+MONTH(issue_date)
+MONTHNAME(issue_date)
+COUNT(*)
+SUM(loan_amount)
+SUM(total_payment)
+```
+
+
+
+---
+
+## 🌎 State Analysis
+
+The project analyzes loan performance by state.
+
+Metrics include:
+
+- Loan Applications
+- Total Funded Amount
+- Total Amount Received
+
+```text
+State
+│
+├── Loan Applications
+├── Funded Amount
+└── Amount Received
+```
+
+---
+
+## ⏳ Term Analysis
+
+Loan performance is also analyzed based on loan term.
+
+The analysis includes:
+
+- Loan Applications
+- Total Funded Amount
+- Total Amount Received
+
+The results are grouped by loan `term`.
+
+---
+
+## 👨‍💼 Employee Length Analysis
+
+The project analyzes loan applications based on:
+
+```text
+Employee Length
+```
+
+For each employment-length category, the SQL calculates:
+
+- Loan Applications
+- Total Funded Amount
+- Total Amount Received
+
+---
+
+## 🎯 Loan Purpose Analysis
+
+The project analyzes different loan purposes.
+
+Examples represented in the dataset include purposes such as:
+
+```text
+Car
+Credit Card
+Debt Consolidation
+```
+
+The analysis groups the data by `purpose` and calculates loan applications, funded amount and amount received.
+
+---
+
+## 🏠 Home Ownership Analysis
+
+Loan performance is also analyzed according to:
+
+```text
+Home Ownership
+```
+
+The analysis calculates:
+
+- Loan Applications
+- Total Funded Amount
+- Total Amount Received
+
+---
+
+# 📈 Month-over-Month Analysis
+
+The project includes Month-over-Month analysis.
+
+### 1. Loan Application Growth
+
+The analysis calculates the percentage change in loan applications compared with the previous month.
+
+It uses the SQL window function:
+
+```sql
+LAG()
+```
+
+along with monthly aggregation.
+
+---
+
+### 2. Loan Amount Disbursed Growth
+
+The project also calculates Month-over-Month growth in the funded loan amount.
+
+```text
+Current Month Funded Amount
+            ↓
+Previous Month Funded Amount
+            ↓
+MoM Growth %
+```
+
+This analysis uses `LAG()` over monthly funded amounts.
+
+---
+
+# 💰 Interest Rate Analysis
+
+The project analyzes average interest rates across loan grades and subgrades.
+
+## Interest Rate by Grade
+
+```sql
+SELECT
+    grade,
+    CONCAT(ROUND(AVG(int_rate) * 100,2),'%') AS Avg_Interest_Rate
+FROM financial_loan
+GROUP BY grade
+ORDER BY grade;
+```
+
+## Interest Rate by Subgrade
+
+```sql
+SELECT
+    sub_grade,
+    CONCAT(ROUND(AVG(int_rate) * 100,2),'%') AS Avg_Interest_Rate
+FROM financial_loan
+GROUP BY sub_grade
+ORDER BY sub_grade;
+```
+
+These queries are included in the miscellaneous analysis section of the project.
+
+---
+
+# 🧠 SQL Concepts Used
+
+The project demonstrates both fundamental and advanced SQL concepts.
+
+### 🟢 Database Fundamentals
+
+```text
 DROP DATABASE
 CREATE DATABASE
 USE
 CREATE TABLE
-```
-
-## 📝 Data Operations
-
-```sql
 INSERT INTO
 ```
 
-## 🔎 Data Querying
+Used to create and populate the financial loan database.
 
-```sql
+---
+
+### 🔵 Data Retrieval & Filtering
+
+```text
 SELECT
 WHERE
-DISTINCT
 GROUP BY
 ORDER BY
+DISTINCT
 ```
 
-## 📊 Aggregate Functions
+Used to retrieve, filter and organize data.
 
-```sql
+---
+
+### 🟣 Aggregate Functions
+
+```text
 COUNT()
 SUM()
 AVG()
 ROUND()
 ```
 
-## 🔀 Conditional Logic
+Used to calculate loan metrics and financial KPIs.
 
-```sql
-CASE
-```
+---
 
-## 🔤 String Functions
+### 🟠 Date & Time Functions
 
-```sql
-CONCAT()
-```
-
-## 📅 Date Functions
-
-```sql
+```text
 MONTH()
-YEAR()
 MONTHNAME()
+YEAR()
 DATE_SUB()
 DATE_FORMAT()
 ```
 
-## 📈 Advanced SQL
+Used for monthly, MTD and PMTD analysis.
+
+---
+
+### 🔴 Advanced SQL
+
+```text
+Subqueries
+LAG()
+OVER()
+Window Functions
+```
+
+Used for month-over-month analysis and comparative calculations.
+
+---
+
+### 🟡 Conditional Analysis
+
+```text
+CASE
+IN
+NOT IN
+```
+
+Used for Good Loan and Bad Loan classification.
+
+---
+
+# 🛠️ Tools & Technologies
+
+| Technology | Purpose |
+|---|---|
+| 🐬 **MySQL** | Relational Database Management |
+| 📝 **SQL** | Data Querying & Analysis |
+| 🖥️ **MySQL Workbench** | SQL Development & Execution |
+| 🗄️ **Relational Database** | Structured Data Storage |
+| 📊 **SQL Analytics** | Business & Financial Analysis |
+
+---
+
+# 🔄 Project Workflow
+
+The project follows a structured SQL data-analysis workflow:
+
+```text
+       ┌──────────────────────┐
+       │   Database Creation  │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │    Table Creation    │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │      Load Data       │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │   Explore Database   │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │   Calculate KPIs     │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │ Loan Status Analysis │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │ Overview Analysis    │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │ Advanced SQL         │
+       │ LAG • Subqueries     │
+       └──────────┬───────────┘
+                  ↓
+       ┌──────────────────────┐
+       │ Analyze Results      │
+       └──────────────────────┘
+```
+
+---
+
+# ▶️ How to Run the Project
+
+## 1. Install MySQL
+
+Install:
+
+- MySQL Server
+- MySQL Workbench
+
+Make sure the MySQL Server is running.
+
+---
+
+## 2. Download the Project
+
+Clone or download the portfolio repository.
+
+Navigate to:
+
+```text
+Data-Analytics-Portfolio/
+└── MySQL/
+    └── Bank-Loan-Data-Analysis/
+```
+
+---
+
+## 3. Open MySQL Workbench
+
+Launch **MySQL Workbench** and connect to your MySQL Server.
+
+---
+
+## 4. Run the Database SQL
+
+Open:
+
+```text
+bank_loan_database.sql
+```
+
+This script:
+
+```text
+Creates financial_db
+        ↓
+Creates financial_loan
+        ↓
+Defines table columns
+        ↓
+Inserts loan data
+```
+
+The database script contains the database creation, table definition and loan records.
+
+---
+
+## 5. Refresh the Schemas
+
+After executing the database script, refresh the **Schemas** panel.
+
+You should see:
+
+```text
+financial_db
+│
+└── financial_loan
+```
+
+---
+
+## 6. Run the Analysis SQL
+
+Open:
+
+```text
+bank_loan_analysis.sql
+```
+
+Make sure the following database is selected:
 
 ```sql
+USE financial_db;
+```
+
+Then execute the analysis queries individually.
+
+The analysis file begins with database selection and includes the Bank Loan Report Summary, KPIs, Good/Bad Loan analysis and Loan Status analysis.
+
+---
+
+# 📥 How to Download
+
+## Option 1 — Download ZIP
+
+1. Open the GitHub repository.
+2. Click **Code**.
+3. Select **Download ZIP**.
+4. Extract the downloaded ZIP file.
+5. Navigate to:
+
+```text
+Data-Analytics-Portfolio/
+└── MySQL/
+    └── Bank-Loan-Data-Analysis/
+```
+
+---
+
+## Option 2 — Clone Using Git
+
+Run:
+
+```bash
+git clone https://github.com/YogirajSharma/Data-Analytics-Portfolio.git
+```
+
+Then navigate to:
+
+```text
+Data-Analytics-Portfolio/MySQL/Bank-Loan-Data-Analysis/
+```
+
+---
+
+# 🎓 Key Learning Areas
+
+This project provides practical experience in:
+
+### 🗄️ MySQL Database Management
+
+Creating and managing a relational database.
+
+### 📊 SQL Data Analysis
+
+Using SQL to analyze financial loan data.
+
+### 💰 Financial KPI Analysis
+
+Calculating:
+
+```text
+Loan Applications
+Funded Amount
+Amount Received
+Interest Rate
+DTI
+```
+
+### 🟢 Good & Bad Loan Analysis
+
+Understanding loan performance based on loan status.
+
+### 📅 Time-Based Analysis
+
+Working with:
+
+```text
+Monthly Analysis
+MTD
+PMTD
+MoM Growth
+```
+
+### 🌎 Dimensional Analysis
+
+Analyzing loan data by:
+
+```text
+State
+Term
+Employee Length
+Purpose
+Home Ownership
+Grade
+Subgrade
+```
+
+### 🧠 Advanced SQL
+
+Working with:
+
+```text
 Subqueries
 Window Functions
 LAG()
 OVER()
+Date Functions
+Aggregate Functions
 ```
+
+---
+
+# 💼 Skills Demonstrated
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/MySQL-Database-4479A1?style=flat-square&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/SQL-Analytics-CC2927?style=flat-square&logo=mysql&logoColor=white">
+<img src="https://img.shields.io/badge/SQL-KPI%20Analysis-2E8B57?style=flat-square">
+<img src="https://img.shields.io/badge/SQL-Subqueries-6A5ACD?style=flat-square">
+<img src="https://img.shields.io/badge/SQL-Window%20Functions-FF8C00?style=flat-square">
+<img src="https://img.shields.io/badge/SQL-Date%20Analysis-8B4513?style=flat-square">
+
+</p>
+
+### Technical Skills
+
+- MySQL
+- SQL
+- Relational Database
+- Database Management
+- SQL Queries
+- SELECT
+- WHERE
+- GROUP BY
+- ORDER BY
+- DISTINCT
+- Aggregate Functions
+- COUNT()
+- SUM()
+- AVG()
+- ROUND()
+- Subqueries
+- Window Functions
+- LAG()
+- OVER()
+- Date Functions
+- KPI Analysis
+- Loan Analysis
+- Financial Data Analysis
+- Good Loan Analysis
+- Bad Loan Analysis
+- Month-over-Month Analysis
 
 ---
 
 # 📂 Project Structure
 
 ```text
-bank-loan-mysql-data-analytics/
+Bank-Loan-Data-Analysis/
 │
-├── README.md
-│
-├──bank_loan_database.sql
-│
-├──bank_loan_analysis.sql
+├── 📄 README.md
+├── 📄 bank_loan_database.sql
+└── 📄 bank_loan_analysis.sql
 ```
 
----
-
-# 📄 File Description
+### File Details
 
 | File | Description |
 |---|---|
-| `README.md` | Complete documentation of the Bank Loan Data Analysis project |
-| `bank_loan_database.sql` | Creates the `financial_db` database, creates the `financial_loan` table, and loads the loan data |
-| `bank_loan_analysis.sql` | Contains SQL queries for KPI, Good Loan, Bad Loan, Loan Status, Overview, Growth, and Interest Rate analysis |
+| `README.md` | Project documentation |
+| `bank_loan_database.sql` | Database creation, table creation and loan data |
+| `bank_loan_analysis.sql` | SQL queries for loan data analysis |
 
 ---
 
-# 🔄 Project Workflow
+# 🔗 Quick Links
 
-```text
-                Raw Loan Data
-                     │
-                     ▼
-          Create MySQL Database
-                     │
-                     ▼
-          Create financial_loan
-                     │
-                     ▼
-              Load Loan Data
-                     │
-                     ▼
-             Data Exploration
-                     │
-                     ▼
-              KPI Analysis
-                     │
-          ┌──────────┴──────────┐
-          ▼                     ▼
-    Good Loan Analysis    Bad Loan Analysis
-          │                     │
-          └──────────┬──────────┘
-                     ▼
-            Loan Status Analysis
-                     │
-                     ▼
-             Loan Overview
-                     │
-                     ▼
-          Time-Based Analysis
-                     │
-                     ▼
-             MoM Growth
-                     │
-                     ▼
-         Interest Rate Analysis
-                     │
-                     ▼
-           Analytical Insights
-```
+<p align="center">
+
+<a href="./bank_loan_database.sql">
+<img src="https://img.shields.io/badge/📄%20Database%20SQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white" alt="Database SQL">
+</a>
+
+<a href="./bank_loan_analysis.sql">
+<img src="https://img.shields.io/badge/📊%20Analysis%20SQL-2E8B57?style=for-the-badge&logo=mysql&logoColor=white" alt="Analysis SQL">
+</a>
+
+</p>
 
 ---
 
-# 🚀 How to Run the Project
+# ⚠️ Important Note
 
-## 1️⃣ Clone the Repository
+The database SQL script contains:
 
-Clone the complete Data Analytics Portfolio repository:
-
-```bash
-git clone https://github.com/YogirajSharma/Data-Analytics-Portfolio.git
+```sql
+DROP DATABASE IF EXISTS financial_db;
 ```
 
-Navigate to the project:
-
-```bash
-cd Data-Analytics-Portfolio/MySQL/bank-loan-mysql-data-analytics
-```
-
----
-
-## 2️⃣ Open MySQL Workbench
-
-Open **MySQL Workbench** and connect to your MySQL server.
-
----
-
-## 3️⃣ Run the Database File
-
-Open:
-
-```text
-mysql/bank_loan_database.sql
-```
-
-Run the complete SQL script.
-
-This creates:
+Therefore, if a database named:
 
 ```text
 financial_db
 ```
 
-and the:
+already exists, it will be dropped before the project database is recreated.
+
+> **⚠️ Important:** Do not run the complete database script if `financial_db` contains important data.
+
+For a learning or portfolio environment, this allows the database to be recreated from the SQL script.
+
+---
+
+# 🏁 Conclusion
+
+The **Bank Loan MySQL Data Analytics Project** demonstrates how SQL can be used to create, manage and analyze financial loan data.
+
+The project covers important business areas including:
 
 ```text
-financial_loan
+Loan Applications
+Funded Amount
+Amount Received
+Loan Status
+Interest Rate
+DTI
+State
+Loan Term
+Employee Length
+Loan Purpose
+Home Ownership
 ```
 
-table and loads the loan data.
-
----
-
-## 4️⃣ Select the Database
-
-Run:
-
-```sql
-USE financial_db;
-```
-
-To verify the available tables:
-
-```sql
-SHOW TABLES;
-```
-
----
-
-## 5️⃣ Check the Table
-
-You can verify the loan data using:
-
-```sql
-SELECT *
-FROM financial_loan
-LIMIT 10;
-```
-
----
-
-## 6️⃣ Run the Analysis File
-
-Open:
+The analysis SQL applies fundamental SQL concepts such as:
 
 ```text
-mysql/bank_loan_analysis.sql
+SELECT
+WHERE
+GROUP BY
+ORDER BY
+COUNT()
+SUM()
+AVG()
 ```
 
-Run the analysis queries section by section.
-
----
-
-# 📊 Analysis Categories
-
-The analysis file covers the following areas:
+along with advanced techniques including:
 
 ```text
-01. Total Loan Applications
-02. MTD Loan Applications
-03. PMTD Loan Applications
-
-04. Total Funded Amount
-05. MTD Funded Amount
-06. PMTD Funded Amount
-
-07. Total Amount Received
-08. MTD Amount Received
-09. PMTD Amount Received
-
-10. Average Interest Rate
-11. MTD Average Interest Rate
-
-12. Average DTI
-13. MTD Average DTI
-
-14. Good Loan Analysis
-15. Bad Loan Analysis
-
-16. Loan Status Analysis
-17. MTD Loan Status Analysis
-
-18. Monthly Loan Overview
-19. State-wise Analysis
-20. Term-wise Analysis
-21. Employee Length Analysis
-22. Purpose-wise Analysis
-23. Home Ownership Analysis
-
-24. Month-over-Month Loan Application Growth
-25. Month-over-Month Funded Amount Growth
-
-26. Grade-wise Average Interest Rate
-27. Sub-Grade-wise Average Interest Rate
+Subqueries
+Window Functions
+LAG()
+OVER()
+Date Functions
 ```
 
----
+The project also performs **Good Loan, Bad Loan, Loan Status, KPI, monthly, state, term, purpose, home ownership, month-over-month and interest-rate analysis**.
 
-# 🧠 Skills Demonstrated
+Overall, this project provides practical experience in:
 
-Through this project, I practiced and demonstrated the following skills:
-
-### SQL Skills
-
-- SQL Query Writing
-- Data Filtering
-- Data Aggregation
-- Grouping and Sorting
-- Conditional Logic
-- Subqueries
-- Window Functions
-- Date-Based Analysis
-
-### Data Analytics Skills
-
-- KPI Analysis
-- Financial Data Analysis
-- Loan Portfolio Analysis
-- Trend Analysis
-- Growth Analysis
-- Segmentation
-- Business-Oriented Data Analysis
-
-### Database Skills
-
-- Database Creation
-- Table Creation
-- Data Loading
-- Database Selection
-- Structured Data Analysis
+**MySQL • SQL • Data Analytics • Financial Analysis • KPI Analysis • Relational Database Management**
 
 ---
 
-# 📚 Learning Outcomes
+# 📌 Project Summary
 
-This project helped strengthen my understanding of SQL and its application in data analytics.
-
-### Key learnings include:
-
-- How to create a database using SQL.
-- How to create and populate a table.
-- How to analyze structured financial data.
-- How to calculate business KPIs.
-- How to use aggregate functions.
-- How to apply conditional logic using `CASE`.
-- How to perform date-based analysis.
-- How to compare current and previous periods.
-- How to use `LAG()` for Month-over-Month analysis.
-- How to analyze data across multiple dimensions.
-- How to organize SQL queries into an analytical workflow.
-
----
-
-# ⭐ Project Highlights
-
-- 🏦 Banking and loan analytics use case
-- 🐬 MySQL-based analysis
-- 📊 Multiple portfolio KPIs
-- 🟢 Good Loan Analysis
-- 🔴 Bad Loan Analysis
-- 📋 Loan Status Analysis
-- 📅 Monthly Analysis
-- 🗺️ State-wise Analysis
-- 📄 Loan Term Analysis
-- 👨‍💼 Employee Length Analysis
-- 🎯 Purpose-wise Analysis
-- 🏠 Home Ownership Analysis
-- 📈 Month-over-Month Growth Analysis
-- 💳 Grade-wise Interest Rate Analysis
-- 🔎 Sub-Grade Interest Rate Analysis
-- 🪟 SQL Window Function implementation
-- 📁 Separate database and analysis SQL files
+| Metric | Value |
+|---|---:|
+| 🗄️ Database | `financial_db` |
+| 📋 Main Table | `financial_loan` |
+| 🐬 DBMS | **MySQL** |
+| 📝 Query Language | **SQL** |
+| 💰 Analysis | **Bank Loan Data** |
+| 📊 KPIs | **Included** |
+| 🟢 Good Loan Analysis | **Included** |
+| 🔴 Bad Loan Analysis | **Included** |
+| 📅 Monthly Analysis | **Included** |
+| 📈 MoM Analysis | **Included** |
+| 💰 Interest Rate Analysis | **Included** |
+| 🧠 Advanced SQL | **Subqueries • Window Functions • LAG()** |
 
 ---
-
-# 🛠️ Project Execution Flow
-
-```text
-Database SQL
-     │
-     ├── Create Database
-     │
-     ├── Create Table
-     │
-     └── Insert Loan Data
-             │
-             ▼
-       financial_loan
-             │
-             ▼
-      Analysis SQL File
-             │
-     ┌───────┼────────┐
-     ▼       ▼        ▼
-    KPI    Loan      Trend
- Analysis Quality   Analysis
-             │
-             ▼
-       Final Analysis
-```
-
----
-
-# 📌 Important Note
-
-This project focuses on **SQL-based data analysis**.
-
-The repository does not include a Power BI dashboard or PNG dashboard image. The analysis is performed through SQL queries contained in:
-
-```text
-mysql/bank_loan_analysis.sql
-```
-
-The database setup and loan data are contained in:
-
-```text
-mysql/bank_loan_database.sql
-```
-
----
-
-# 👨‍💻 Author
-
-## Yogesh Sharma
-
-🎓 B.Tech – Data Science  
-📊 Aspiring Data Analyst  
-💻 SQL | MySQL | Excel | Power BI | Python
-
----
-
-## 🔗 My Portfolio
 
 <p align="center">
+
+<strong>🏦 Bank Loan MySQL Data Analytics</strong>
+
+<br>
+
+<sub>
+MySQL • SQL • Financial Data Analysis • Data Analytics
+</sub>
+
+<br><br>
 
 <a href="https://github.com/YogirajSharma/Data-Analytics-Portfolio">
-
-<img src="https://img.shields.io/badge/📊%20View%20My%20Data%20Analytics%20Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Data Analytics Portfolio">
-
+<img src="https://img.shields.io/badge/🔗%20Data%20Analytics%20Portfolio-181717?style=for-the-badge&logo=github&logoColor=white" alt="Data Analytics Portfolio">
 </a>
-
-</p>
-
----
-
-## 🔗 GitHub Profile
-
-<p align="center">
-
-<a href="https://github.com/YogirajSharma">
-
-<img src="https://img.shields.io/badge/GitHub-YogirajSharma-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Profile">
-
-</a>
-
-</p>
-
----
-
-# ⭐ Support
-
-If you found this project useful or informative:
-
-⭐ Consider starring the repository.
-
-🍴 Feel free to explore the project.
-
-📂 Check out my other Data Analytics projects in the portfolio.
-
----
-
-<p align="center">
-
-<b>📊 Turning Data into Meaningful Insights with SQL</b>
-
-</p>
-
-<p align="center">
-
-Made with ❤️ using MySQL & SQL
 
 </p>
