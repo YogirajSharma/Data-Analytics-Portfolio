@@ -527,7 +527,8 @@ Using SQL to answer practical business questions.
 
 # 🔗 Project Links
 
-<p align="center">
+<p>
+
 
 <a href="./bank-loan-mysql-data-analytics">
 
