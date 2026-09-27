@@ -23,25 +23,6 @@
 
 ---
 
-# 📌 Table of Contents
-
-- [📖 About This Folder](#-about-this-folder)
-- [🎯 Objective](#-objective)
-- [📊 Projects Overview](#-projects-overview)
-- [🏦 Bank Loan Data Analytics](#-bank-loan-data-analytics)
-- [🎬 Netflix Data Analytics](#-netflix-data-analytics)
-- [🍔 Zomato Data Analytics](#-zomato-data-analytics)
-- [🧠 SQL Concepts Covered](#-sql-concepts-covered)
-- [🛠️ Tools & Technologies](#️-tools--technologies)
-- [🔄 Common Project Workflow](#-common-project-workflow)
-- [📂 Folder Structure](#-folder-structure)
-- [🎓 Key Learning Areas](#-key-learning-areas)
-- [💼 Skills Demonstrated](#-skills-demonstrated)
-- [🔗 Project Links](#-project-links)
-- [🏁 Conclusion](#-conclusion)
-
----
-
 # 📖 About This Folder
 
 The **MySQL** folder contains a collection of SQL and MySQL-based data analytics projects created as part of my **Data Analytics Portfolio**.
@@ -86,13 +67,13 @@ The main objective of these projects is to develop and demonstrate practical ski
 
 ---
 
-# 📊 Projects Overview
+## 📊 Project Overview
 
 | # | Project | Domain | Main Focus |
-|---:|---|---|---|
-| 01 | 🏦 **Bank Loan MySQL Data Analytics** | Finance | Loan & Financial Analysis |
-| 02 | 🎬 **Netflix MySQL Data Analytics** | Entertainment | Netflix Content Analysis |
-| 03 | 🍔 **Zomato MySQL Data Analytics** | Food & Delivery | Restaurant & Order Analysis |
+|---|---|---|---|
+| 01 | [🏦 Bank Loan MySQL Data Analytics](./bank-loan-mysql-data-analytics) | Finance | Loan & Financial Analysis |
+| 02 | [🎬 Netflix MySQL Data Analytics](./netflix-mysql-data-analytics) | Entertainment | Netflix Content Analysis |
+| 03 | [🍔 Zomato MySQL Data Analytics](./zomato-mysql-data-analytics) | Food & Delivery | Restaurant & Order Analysis |
 
 ---
 
