@@ -516,7 +516,7 @@ I would love to connect with professionals, recruiters, fellow learners, and peo
 - **GitHub Profile:** https://github.com/YogirajSharma
 - **Data Analytics Portfolio:** https://github.com/YogirajSharma/Data-Analytics-Portfolio
 - **LinkedIn:** https://www.linkedin.com/in/yogesh-sharma-937757281/
-- **Email:** yogirajsharma482@gmail.com
+- **Email:** [yogirajsharma482@gmail.com](mailto:yogirajsharma482@gmail.com)
 
 ---
 
